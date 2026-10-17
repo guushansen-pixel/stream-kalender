@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>Stream-Kalender</title>
+<style>
+  :root {
+    --bg: #0f1419; --surface: #182029; --surface2: #212b36; --line: #2c3845;
+    --text: #e8edf2; --muted: #93a1b0; --accent: #3fb68b; --accent-ink: #062b1d;
+    --maybe: #e0b341; --maybe-ink: #2e2304; --pay: #7d8a97; --link: #6cb8ff; --danger: #ef6b6b;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f3f5f7; --surface: #ffffff; --surface2: #eef1f4; --line: #dde3e9;
+      --text: #15202b; --muted: #5d6b79; --accent: #1f8f63; --accent-ink: #ffffff;
+      --maybe: #b8860b; --maybe-ink: #ffffff; --pay: #6b7782; --link: #0b62c4;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body { font: 15px/1.4 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; -webkit-tap-highlight-color: transparent; }
+  header {
+    position: sticky; top: 0; z-index: 5; background: var(--bg);
+    padding: calc(env(safe-area-inset-top) + 10px) 16px 8px; border-bottom: 1px solid var(--line);
+  }
+  .row { display: flex; align-items: center; gap: 8px; }
+  h1 { font-size: 19px; margin: 0; flex: 1; letter-spacing: .2px; }
+  .iconbtn { background: var(--surface2); border: 0; color: var(--text); width: 36px; height: 36px; border-radius: 50%; font-size: 17px; }
+  .where { margin-top: 8px; }
+  .where label { color: var(--muted); font-size: 13px; white-space: nowrap; }
+  select {
+    flex: 1; min-width: 0; background: var(--surface2); color: var(--text); border: 1px solid var(--line);
+    border-radius: 10px; padding: 8px 10px; font: inherit;
+  }
+  .chips { display: flex; gap: 6px; overflow-x: auto; padding: 8px 0 2px; scrollbar-width: none; }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: none; border: 1px solid var(--line); background: var(--surface); color: var(--text);
+    border-radius: 999px; padding: 6px 12px; font: inherit; font-size: 13px;
+  }
+  .chip[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+  main { padding: 8px 16px calc(env(safe-area-inset-bottom) + 24px); max-width: 760px; margin: 0 auto; }
+  .day { margin: 18px 0 8px; font-weight: 650; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .6px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 12px 14px; margin-bottom: 10px; }
+  .meta { display: flex; gap: 8px; align-items: baseline; color: var(--muted); font-size: 13px; }
+  .time { font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; font-size: 15px; }
+  .comp { margin-left: auto; text-align: right; }
+  .teams { font-size: 16px; font-weight: 600; margin: 4px 0 2px; }
+  .stage { color: var(--muted); font-size: 12.5px; }
+  .sect { margin-top: 10px; }
+  .sect h3 { margin: 0 0 6px; font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+  .offers { display: flex; flex-direction: column; gap: 6px; }
+  a.offer {
+    display: flex; align-items: center; gap: 8px; text-decoration: none; color: var(--text);
+    background: var(--surface2); border-radius: 10px; padding: 8px 10px; border-left: 4px solid var(--accent);
+  }
+  a.offer.maybe { border-left-color: var(--maybe); }
+  .offer .name { font-weight: 600; flex: 1; min-width: 0; }
+  .offer .name small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; margin-top: 1px; }
+  .badge { flex: none; font-size: 11px; border-radius: 6px; padding: 2px 6px; font-weight: 650; }
+  .badge.sure { background: var(--accent); color: var(--accent-ink); }
+  .badge.maybe { background: var(--maybe); color: var(--maybe-ink); }
+  .none { color: var(--muted); font-size: 13.5px; }
+  .pay { color: var(--pay); font-size: 13px; }
+  details { margin-top: 8px; }
+  summary { color: var(--link); font-size: 13.5px; cursor: pointer; }
+  .elsewhere { margin-top: 6px; display: grid; gap: 4px; font-size: 13px; }
+  .elsewhere button { all: unset; color: var(--link); cursor: pointer; }
+  .empty { text-align: center; color: var(--muted); padding: 40px 10px; }
+  .status { font-size: 12px; color: var(--muted); padding: 6px 0 0; }
+  .status.warn { color: var(--maybe); }
+  dialog { border: 0; border-radius: 18px; background: var(--surface); color: var(--text); width: min(560px, calc(100vw - 32px)); padding: 18px 18px 12px; }
+  dialog::backdrop { background: rgba(0,0,0,.55); }
+  dialog h2 { margin: 0 0 8px; font-size: 18px; }
+  dialog p, dialog li { font-size: 14px; color: var(--text); }
+  dialog .muted { color: var(--muted); font-size: 13px; }
+  dialog button.close { float: right; }
+</style>
+</head>
+<body>
+<header>
+  <div class="row">
+    <h1>Stream-Kalender</h1>
+    <button class="iconbtn" id="infoBtn" aria-label="Info">i</button>
+  </div>
+  <div class="row where">
+    <label for="country">Ich bin in</label>
+    <select id="country"></select>
+  </div>
+  <div class="chips" id="rangeChips"></div>
+  <div class="chips" id="filterChips"></div>
+  <div class="status" id="status"></div>
+</header>
+<main id="list"><p class="empty">Lade Termine …</p></main>
+
+<dialog id="info">
+  <button class="iconbtn close" onclick="this.closest('dialog').close()" aria-label="Schließen">×</button>
+  <h2>So funktioniert's</h2>
+  <p>Der Kalender zeigt, wo Spiele <b>legal und kostenlos</b> laufen: im Free-TV, in offiziellen Mediatheken,
+    Gratis-Apps oder offiziellen YouTube-Kanälen. Verlinkt werden nur die Seiten der Sender selbst.</p>
+  <ul>
+    <li><span class="badge sure">sicher</span> – für dieses Spiel angekündigt bzw. in den Programmlisten gefunden.</li>
+    <li><span class="badge maybe">möglich</span> – der Sender zeigt diesen Wettbewerb in diesem Land, aber nicht unbedingt dieses Spiel. Bitte kurz vorher im Programm prüfen.</li>
+  </ul>
+  <p><b>Wichtig für den Urlaub:</b> Ausländische Sender sind nur im jeweiligen Land frei empfangbar. Deutsche
+    Free-TV-Streams (ARD, ZDF, Joyn …) sind im Ausland meist gesperrt – die EU-Portabilität gilt nur für
+    bezahlte Abos (z. B. DAZN, Sky, Dyn), nicht für Free-TV. Wähle oben einfach das Land, in dem du gerade bist.</p>
+  <p class="muted" id="dataInfo"></p>
+  <p class="muted">Quellen: Spielpläne von OpenLigaDB (ODbL) und EuroLeague; Senderlisten von liveonsat.com,
+    offiziellen Rechtehalter-Listen (Bundesliga, UEFA, DFB, FIBA, IHF) und eigener Recherche. Keine Gewähr –
+    Rechte und Programme ändern sich kurzfristig.</p>
+</dialog>
+
+<script>
+'use strict';
+const DATA_URL = 'https://raw.githubusercontent.com/guushansen-pixel/stream-kalender/main/data/matches.json';
+const LOCAL_URLS = ['data/matches.json', '../data/matches.json'];
+const PREFS_KEY = 'streamkal.prefs.v1';
+const DATA_KEY = 'streamkal.data.v1';
+
+const SPORTS = { football: 'Fußball', basketball: 'Basketball', handball: 'Handball', boxing: 'Boxen', darts: 'Darts' };
+const RANGES = { today: 'Heute', tomorrow: 'Morgen', week: '7 Tage', month: '30 Tage', all: 'Alle' };
+const ACCESS = { free: '', 'free-reg': 'kostenlose Registrierung', partial: 'nur ausgewählte Spiele gratis' };
+
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* voll oder gesperrt */ } }
+};
+const prefs = Object.assign({ country: 'DE', range: 'week', sports: Object.keys(SPORTS), onlyFree: false, onlyGerman: false }, store.get(PREFS_KEY, {}));
+const savePrefs = () => store.set(PREFS_KEY, prefs);
+
+let data = null;
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const flag = (iso) => /^[A-Z]{2}$/.test(iso) ? String.fromCodePoint(...[...iso].map((c) => 0x1f1a5 + c.charCodeAt(0))) : '🌐';
+
+async function fetchJson(url) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 8000);
+  try {
+    const r = await fetch(url, { signal: ctl.signal, cache: 'no-cache' });
+    if (!r.ok) throw new Error(r.status);
+    return await r.json();
+  } finally { clearTimeout(t); }
+}
+
+async function load() {
+  const cached = store.get(DATA_KEY, null);
+  if (cached) { data = cached; render(); }
+  let fresh = null, from = '';
+  try { fresh = await fetchJson(DATA_URL); from = 'online'; } catch { /* offline oder Repo noch nicht da */ }
+  if (!fresh) {
+    for (const u of LOCAL_URLS) { try { fresh = await fetchJson(u); from = 'mitgeliefert'; break; } catch { /* naechste */ } }
+  }
+  // Nur ersetzen, wenn neuer als der Cache.
+  if (fresh && (!data || fresh.generatedAt >= data.generatedAt)) {
+    data = fresh;
+    if (from === 'online') store.set(DATA_KEY, fresh);
+  }
+  if (!data) { $('list').innerHTML = '<p class="empty">Keine Daten verfügbar. Bitte mit dem Internet verbinden.</p>'; return; }
+  setStatus(from);
+  render();
+}
+
+function setStatus(from) {
+  const age = (Date.now() - Date.parse(data.generatedAt)) / 3600e3;
+  const st = $('status');
+  const when = new Date(data.generatedAt).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' });
+  st.textContent = `Datenstand ${when}` + (from === 'online' ? '' : from ? ' (offline/mitgeliefert)' : ' (Cache)');
+  st.classList.toggle('warn', age > 48);
+  $('dataInfo').textContent = `Datenstand ${when}, Senderliste geprüft am ${data.checked}.`;
+}
+
+function countryOptions() {
+  const set = new Set(['DE']);
+  for (const c of Object.values(data.channels)) (c.country === '*' ? c.regions || [] : [c.country]).forEach((x) => set.add(x));
+  return [...set].filter((c) => data.countries[c]).sort((a, b) => (a === 'DE' ? -1 : b === 'DE' ? 1 : data.countries[a].localeCompare(data.countries[b], 'de')));
+}
+
+function buildControls() {
+  const sel = $('country');
+  sel.innerHTML = countryOptions().map((c) => `<option value="${c}">${flag(c)} ${esc(data.countries[c])}</option>`).join('');
+  sel.value = prefs.country;
+  if (sel.value !== prefs.country) { prefs.country = 'DE'; sel.value = 'DE'; }
+  sel.onchange = () => { prefs.country = sel.value; savePrefs(); render(); };
+
+  $('rangeChips').innerHTML = Object.entries(RANGES).map(([k, v]) => `<button class="chip" data-range="${k}" aria-pressed="${prefs.range === k}">${v}</button>`).join('');
+  $('rangeChips').onclick = (e) => { const b = e.target.closest('[data-range]'); if (!b) return; prefs.range = b.dataset.range; savePrefs(); render(); };
+
+  $('filterChips').innerHTML =
+    `<button class="chip" data-flag="onlyFree" aria-pressed="${prefs.onlyFree}">Nur frei hier</button>` +
+    `<button class="chip" data-flag="onlyGerman" aria-pressed="${prefs.onlyGerman}">Nur deutsche Teams</button>` +
+    Object.entries(SPORTS).map(([k, v]) => `<button class="chip" data-sport="${k}" aria-pressed="${prefs.sports.includes(k)}">${v}</button>`).join('');
+  $('filterChips').onclick = (e) => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.flag) prefs[b.dataset.flag] = !prefs[b.dataset.flag];
+    if (b.dataset.sport) {
+      const s = b.dataset.sport;
+      prefs.sports = prefs.sports.includes(s) ? prefs.sports.filter((x) => x !== s) : [...prefs.sports, s];
+    }
+    savePrefs(); render();
+  };
+}
+
+function inRange(m) {
+  const start = new Date(); start.setHours(0, 0, 0, 0);
+  const ko = Date.parse(m.ko), end = Date.parse(m.end || m.ko) + 3 * 3600e3;
+  const day = 86400e3, s = start.getTime();
+  if (!m.end && ko + 2.5 * 3600e3 < Date.now()) return false;
+  if (m.end && Date.parse(m.end) < Date.now()) return false;
+  switch (prefs.range) {
+    case 'today': return ko < s + day && end >= s;
+    case 'tomorrow': return ko < s + 2 * day && end >= s + day;
+    case 'week': return ko < s + 7 * day;
+    case 'month': return ko < s + 30 * day;
+    default: return true;
+  }
+}
+
+const offersIn = (m, c) => m.offers.filter((o) => o.c === c && data.channels[o.ch]);
+
+function offerHtml(o) {
+  const ch = data.channels[o.ch];
+  const sure = o.conf === 'sicher';
+  const extra = [ACCESS[ch.access], ch.lang && ch.lang !== 'de' ? ch.lang.toUpperCase() : '', o.note || ch.note].filter(Boolean).join(' · ');
+  return `<a class="offer ${sure ? '' : 'maybe'}" href="${esc(ch.url)}" target="_blank" rel="noopener">
+      <span class="name">${esc(o.label || ch.name)}${extra ? `<small>${esc(extra)}</small>` : ''}</span>
+      <span class="badge ${sure ? 'sure' : 'maybe'}">${sure ? 'sicher' : 'möglich'}</span></a>`;
+}
+
+const sortOffers = (a, b) => (a.conf === b.conf ? 0 : a.conf === 'sicher' ? -1 : 1);
+
+function cardHtml(m) {
+  const c = prefs.country;
+  const d = new Date(m.ko);
+  const time = m.tbc ? 'offen' : d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+  const comp = data.comps[m.comp]?.name || m.comp;
+  const here = offersIn(m, c).sort(sortOffers);
+  const de = c !== 'DE' ? offersIn(m, 'DE').sort(sortOffers) : [];
+  const elsewhere = {};
+  for (const o of m.offers) if (o.c !== c && o.c !== 'DE' && data.channels[o.ch]) (elsewhere[o.c] ||= []).push(o);
+  const payHere = m.pay?.[c] || [];
+  const payDe = c !== 'DE' ? (m.pay?.DE || []) : [];
+  const title = m.away ? `${esc(m.home)} – ${esc(m.away)}` : esc(m.home);
+
+  let h = `<article class="card">
+    <div class="meta"><span class="time">${time}</span><span>${esc(SPORTS[m.sport] || '')}</span><span class="comp">${esc(comp)}</span></div>
+    <div class="teams">${title}</div>
+    ${m.stage || m.venue ? `<div class="stage">${esc([m.stage, m.venue].filter(Boolean).join(' · '))}</div>` : ''}
+    <div class="sect"><h3>${flag(c)} Frei in ${esc(data.countries[c])}</h3>
+      ${here.length ? `<div class="offers">${here.map(offerHtml).join('')}</div>` : '<div class="none">Kein freies Angebot bekannt.</div>'}
+      ${payHere.length ? `<div class="pay">Pay: ${esc(payHere.slice(0, 6).join(', '))}${payHere.length > 6 ? ' …' : ''}</div>` : ''}
+    </div>`;
+  if (c !== 'DE') {
+    h += `<div class="sect"><h3>🇩🇪 Frei in Deutschland</h3>
+      ${de.length ? `<div class="offers">${de.map(offerHtml).join('')}</div>` : '<div class="none">Kein Free-TV bekannt.</div>'}
+      ${payDe.length ? `<div class="pay">Pay: ${esc(payDe.slice(0, 6).join(', '))}</div>` : ''}</div>`;
+  }
+  const ec = Object.keys(elsewhere).sort((a, b) => (data.countries[a] || a).localeCompare(data.countries[b] || b, 'de'));
+  if (ec.length) {
+    h += `<details><summary>Frei in ${ec.length} weiteren Ländern</summary><div class="elsewhere">` +
+      ec.map((x) => `<div>${flag(x)} <button data-goto="${x}">${esc(data.countries[x] || x)}</button>: ${esc(elsewhere[x].map((o) => (o.label || data.channels[o.ch].name) + (o.conf === 'sicher' ? '' : ' (möglich)')).join(', '))}</div>`).join('') +
+      '</div></details>';
+  }
+  if (m.note) h += `<div class="stage" style="margin-top:8px">${esc(m.note)}</div>`;
+  return h + '</article>';
+}
+
+function render() {
+  if (!data) return;
+  buildControls();
+  const c = prefs.country;
+  const items = data.matches.filter((m) =>
+    prefs.sports.includes(m.sport) && inRange(m) &&
+    (!prefs.onlyGerman || m.de) &&
+    (!prefs.onlyFree || offersIn(m, c).length));
+  if (!items.length) {
+    $('list').innerHTML = '<p class="empty">Keine Termine für diese Auswahl.</p>';
+    return;
+  }
+  let html = '', lastDay = '';
+  for (const m of items) {
+    const day = new Date(m.ko).toLocaleDateString('de-DE', { weekday: 'long', day: '2-digit', month: 'long' });
+    if (day !== lastDay) { html += `<div class="day">${esc(day)}</div>`; lastDay = day; }
+    html += cardHtml(m);
+  }
+  $('list').innerHTML = html;
+}
+
+$('list').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-goto]');
+  if (!b) return;
+  prefs.country = b.dataset.goto; savePrefs(); render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+$('infoBtn').onclick = () => $('info').showModal();
+load();
+</script>
+</body>
+</html>

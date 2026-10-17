@@ -1,0 +1,7 @@
+{
+  "name": "stream-kalender",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node pipeline/build.mjs" },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+node_modules/
+# livesoccertv-Cache (nur mit --lstv) und Staging-Ordner fuer den APK-Build
+data/cache/
+build/
+*.aab

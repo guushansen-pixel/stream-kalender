@@ -1,0 +1,60 @@
+{
+  "_doc": "Von Hand gepflegt. events = Termine ohne freie API (Handball, Basketball-Nationalteam, Boxen, Darts, BBL-Free-TV-Spiele). overrides = spielgenaue Free-TV-Zusagen fuer API-Spiele (Treffer ueber Wettbewerb + Datum in Berliner Zeit + Teamname-Teilstrings). timeTBC = Uhrzeit noch offen. Stand 2026-10-17.",
+  "events": [
+    { "id": "hb-emq-ger-bel", "sport": "handball", "comp": "hb-nt", "kickoffUTC": "2026-11-05T17:00:00Z", "timeTBC": true, "home": "Deutschland", "away": "Belgien", "venue": "Berlin", "stage": "EM-Qualifikation",
+      "offers": [{ "channel": "prosieben", "conf": "sicher" }], "pay": ["Dyn"] },
+    { "id": "hbw-em-ger-swe", "sport": "handball", "comp": "hb-nt-w", "kickoffUTC": "2026-12-04T17:00:00Z", "timeTBC": true, "home": "Deutschland", "away": "Schweden", "stage": "Frauen-EM, Gruppe F",
+      "offers": [{ "channel": "zdf", "conf": "sicher" }] },
+    { "id": "hbw-em-ger-srb", "sport": "handball", "comp": "hb-nt-w", "kickoffUTC": "2026-12-06T17:00:00Z", "timeTBC": true, "home": "Deutschland", "away": "Serbien", "stage": "Frauen-EM, Gruppe F",
+      "offers": [{ "channel": "ard", "conf": "sicher" }] },
+    { "id": "hbw-em-ger-svk", "sport": "handball", "comp": "hb-nt-w", "kickoffUTC": "2026-12-08T17:00:00Z", "timeTBC": true, "home": "Deutschland", "away": "Slowakei", "stage": "Frauen-EM, Gruppe F",
+      "offers": [{ "channel": "ard", "conf": "sicher" }] },
+
+    { "id": "hbwm-ger-tun", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-13T19:30:00Z", "home": "Deutschland", "away": "Tunesien", "venue": "München", "stage": "WM, Gruppe A",
+      "offers": [{ "channel": "prosieben", "conf": "sicher" }, { "channel": "dr", "conf": "möglich" }], "pay": ["Dyn"] },
+    { "id": "hbwm-ger-uru", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-15T19:30:00Z", "home": "Deutschland", "away": "Uruguay", "venue": "München", "stage": "WM, Gruppe A",
+      "offers": [{ "channel": "prosieben", "conf": "sicher" }], "pay": ["Dyn"] },
+    { "id": "hbwm-ger-srb", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-17T19:30:00Z", "home": "Deutschland", "away": "Serbien", "venue": "München", "stage": "WM, Gruppe A",
+      "offers": [{ "channel": "prosieben", "conf": "sicher" }], "pay": ["Dyn"] },
+    { "id": "hbwm-qf1", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-26T17:00:00Z", "timeTBC": true, "home": "Viertelfinale", "away": "(Paarung offen)", "venue": "Köln", "stage": "WM, Viertelfinale",
+      "offers": [{ "channel": "prosieben", "conf": "möglich" }, { "channel": "dr", "conf": "möglich" }, { "channel": "ct", "conf": "möglich" }, { "channel": "m4", "conf": "möglich" }, { "channel": "ruv", "conf": "möglich" }, { "channel": "tf1", "conf": "möglich" }, { "channel": "vrt", "conf": "möglich" }], "pay": ["Dyn"] },
+    { "id": "hbwm-qf2", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-27T17:00:00Z", "timeTBC": true, "home": "Viertelfinale", "away": "(Paarung offen)", "venue": "Köln", "stage": "WM, Viertelfinale",
+      "offers": [{ "channel": "prosieben", "conf": "möglich" }, { "channel": "dr", "conf": "möglich" }, { "channel": "ct", "conf": "möglich" }, { "channel": "m4", "conf": "möglich" }, { "channel": "ruv", "conf": "möglich" }, { "channel": "tf1", "conf": "möglich" }, { "channel": "vrt", "conf": "möglich" }], "pay": ["Dyn"] },
+    { "id": "hbwm-sf", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-29T17:00:00Z", "timeTBC": true, "home": "Halbfinale", "away": "(Paarungen offen)", "venue": "Köln", "stage": "WM, Halbfinale",
+      "offers": [{ "channel": "prosieben", "conf": "möglich" }, { "channel": "dr", "conf": "möglich" }, { "channel": "ct", "conf": "möglich" }, { "channel": "m4", "conf": "möglich" }, { "channel": "ruv", "conf": "möglich" }, { "channel": "tf1", "conf": "möglich" }, { "channel": "vrt", "conf": "möglich" }], "pay": ["Dyn"] },
+    { "id": "hbwm-final", "sport": "handball", "comp": "hbwm", "kickoffUTC": "2027-01-31T17:00:00Z", "timeTBC": true, "home": "Finale", "away": "(und Spiel um Platz 3)", "venue": "Köln", "stage": "WM, Finale",
+      "offers": [{ "channel": "prosieben", "conf": "sicher" }, { "channel": "dr", "conf": "möglich" }, { "channel": "ct", "conf": "möglich" }, { "channel": "m4", "conf": "möglich" }, { "channel": "ruv", "conf": "möglich" }, { "channel": "tf1", "conf": "möglich" }, { "channel": "vrt", "conf": "möglich" }], "pay": ["Dyn"] },
+
+    { "id": "bbwmq-lat-ger", "sport": "basketball", "comp": "bb-nt", "kickoffUTC": "2026-11-27T17:00:00Z", "timeTBC": true, "home": "Lettland", "away": "Deutschland", "venue": "Riga", "stage": "WM-Qualifikation",
+      "offers": [{ "channel": "magenta-free", "conf": "möglich" }, { "channel": "ltv7", "conf": "möglich" }], "pay": ["MagentaSport"] },
+    { "id": "bbwmq-ger-pol", "sport": "basketball", "comp": "bb-nt", "kickoffUTC": "2026-11-30T18:30:00Z", "home": "Deutschland", "away": "Polen", "venue": "Frankfurt", "stage": "WM-Qualifikation",
+      "offers": [{ "channel": "magenta-free", "conf": "möglich" }, { "channel": "tvp", "conf": "möglich" }], "pay": ["MagentaSport"] },
+    { "id": "bbwmq-ned-ger", "sport": "basketball", "comp": "bb-nt", "kickoffUTC": "2027-02-25T18:00:00Z", "timeTBC": true, "home": "Niederlande", "away": "Deutschland", "stage": "WM-Qualifikation",
+      "offers": [{ "channel": "magenta-free", "conf": "möglich" }], "pay": ["MagentaSport"] },
+    { "id": "bbwmq-ger-lat", "sport": "basketball", "comp": "bb-nt", "kickoffUTC": "2027-02-28T17:00:00Z", "timeTBC": true, "home": "Deutschland", "away": "Lettland", "stage": "WM-Qualifikation",
+      "offers": [{ "channel": "magenta-free", "conf": "möglich" }, { "channel": "ltv7", "conf": "möglich" }], "pay": ["MagentaSport"] },
+
+    { "id": "box-canelo-mbilli", "sport": "boxing", "comp": "box", "kickoffUTC": "2026-10-31T21:00:00Z", "timeTBC": true, "home": "Canelo Álvarez", "away": "Christian Mbilli", "venue": "Riad", "stage": "WBC-WM Supermittelgewicht",
+      "offers": [], "pay": ["DAZN (PPV)"], "note": "Kein Free-TV bekannt" },
+    { "id": "box-kabayel-hysa", "sport": "boxing", "comp": "box", "kickoffUTC": "2026-11-28T21:00:00Z", "timeTBC": true, "home": "Agit Kabayel", "away": "Nelson Hysa", "venue": "Düsseldorf", "stage": "WBC-WM Schwergewicht",
+      "offers": [], "pay": ["DAZN"], "note": "Kein Free-TV bekannt" },
+    { "id": "box-fury-joshua", "sport": "boxing", "comp": "box", "kickoffUTC": "2026-12-12T21:00:00Z", "timeTBC": true, "home": "Tyson Fury", "away": "Anthony Joshua", "venue": "Cardiff", "stage": "Schwergewicht (WBA)",
+      "offers": [], "pay": ["Netflix (weltweit, im Abo)"], "note": "Datum 11. oder 12.12. – Quellen widersprechen sich" },
+
+    { "id": "darts-wm-2027", "sport": "darts", "comp": "darts", "kickoffUTC": "2026-12-11T19:00:00Z", "endUTC": "2027-01-03T23:00:00Z", "timeTBC": true, "home": "PDC Darts-WM", "away": "", "venue": "London (Ally Pally)", "stage": "11.12.2026 – 03.01.2027",
+      "offers": [{ "channel": "sport1", "conf": "sicher" }], "pay": ["DAZN"] }
+  ],
+  "overrides": [
+    { "comp": "dfb", "date": "2026-10-27", "teams": ["dortmund", "bremen"], "offers": [{ "channel": "zdf", "conf": "sicher" }] },
+    { "comp": "dfb", "date": "2026-10-27", "teams": ["hamburg", "frankfurt"], "offers": [{ "channel": "rtl-de", "conf": "sicher" }] },
+    { "comp": "dfb", "date": "2026-10-28", "teams": ["bayern", "magdeburg"], "offers": [{ "channel": "ard", "conf": "sicher" }] },
+    { "comp": "nt", "date": "2026-11-13", "teams": ["serbien", "deutschland"], "offers": [{ "channel": "rtl-de", "conf": "sicher" }] },
+    { "comp": "nt", "date": "2026-11-16", "teams": ["deutschland", "niederlande"], "offers": [{ "channel": "ard", "conf": "sicher" }, { "channel": "nos", "conf": "möglich" }] },
+    { "comp": "bl1", "date": "2026-12-18", "teams": [], "offers": [{ "channel": "sat1", "conf": "sicher" }] },
+    { "comp": "bl1", "date": "2027-01-08", "teams": [], "offers": [{ "channel": "sat1", "conf": "sicher" }] },
+    { "comp": "el", "date": "2026-10-23", "teams": ["olympiac", "fenerbah"], "offers": [{ "channel": "magenta-free", "conf": "sicher" }] },
+    { "comp": "el", "date": "2026-10-28", "teams": ["besiktas", "olympiac"], "offers": [{ "channel": "magenta-free", "conf": "sicher" }] },
+    { "comp": "el", "date": "2026-11-06", "teams": ["partizan", "maccabi"], "offers": [{ "channel": "magenta-free", "conf": "sicher" }] },
+    { "comp": "el", "date": "2026-11-18", "teams": ["besiktas", "real"], "offers": [{ "channel": "magenta-free", "conf": "sicher" }] }
+  ]
+}

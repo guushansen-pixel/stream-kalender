@@ -1,0 +1,19 @@
+{
+  "_doc": "Bekannte Pay-Angebote. Sie werden als 'Pay' gruppiert und nicht in die Pruef-Queue gestellt. Reihenfolge egal; channels.json hat Vorrang (z. B. DAZN Canada = partial frei). Regex, case-insensitive.",
+  "patterns": [
+    "^Sky", "^WOW", "^DAZN", "^Magenta", "^Dyn( |$)", "^Prime Video", "^Amazon", "^RTL\\+", "^Joyn ?PLUS",
+    "beIN", "Via ?[Pp]lay", "^V Sport", "^Canal\\+", "myCANAL", "^Arena", "^Eleven", "^Setanta", "^ESPN", "^Fox",
+    "^FOX", "^Star ?[Tt]imes", "^Azam", "^Nova ?Sport", "^Diema", "^Play Diema", "Sport ?[Kk]lub", "^Okko", "^Sport TV",
+    "^Sportv", "^SporTV", "^Disney", "^HBO", "^Max ", "^Peacock", "^fubo", "^USA Network", "^Paramount", "^TNT",
+    "^Movistar", "^Orange", "^Telenet", "^Play Sports", "^Proximus", "^Ziggo", "^Polsat", "^Canal ?\\+", "^Go3",
+    "^TV ?2 Play", "^TV2", "^MTV Katsomo", "^Elisa", "^Monomax", "^AIS", "^True", "^Coupang", "^Zee5", "^ZEE5",
+    "^Unite8", "^S Sport", "^EXXEN", "^Tring", "^MAXtv", "^Sport 6", "^Sport ?[0-9] Israel", "^Match4", "^Match ?TV",
+    "^Voyo", "^OnePlay", "^Oneplay", "^Fast Sports", "^Kyivstar", "^MBC Shahid", "^Shahid", "^Vision\\+",
+    "^MAXstream", "^sooka", "^StarHub", "^Now (TV|Player)", "^M Plus", "^Migu", "^ELTA", "^TV 360", "^Salom",
+    "^TV NET", "^SÝN", "^See$", "^ZAP", "^ZSPORT", "^GO TV", "^TSN", "^OneSoccer", "^Stan", "^Kayo", "^Optus",
+    "^NAICOM", "^SCCN", "^Courtside", "^EuroLeague TV", "^EHFTV", "^Netflix", "^Fandango At Home", "^Sport ?Klub",
+    "^ŠTV", "^Sport TV[0-9] Slovenija", "^Premier Sports", "^TV3", "^Viasat", "^CBS Sports Network", "^Unimas\\+",
+    "^Golf", "^Sportdigital", "^Sportdeutschland", "^LVZ", "^MZ ", "^FreiePresse", "^OneFootball", "^Onefootball",
+    "^Sky Go", "^NOW TV", "^SKY Go", "^Inter$", "^let us know", "^ST (World|Sports)", "^NBC Universo", "^See ", "^bTV", "^Ring ", "^M\\+ ", "^Match 4", "^Kanal 1 Xtra"
+  ]
+}

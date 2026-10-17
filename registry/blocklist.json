@@ -1,0 +1,7 @@
+{
+  "_doc": "Sender, die nachweislich oder wahrscheinlich ohne Rechte senden (iranische/afghanische Sat-Kanaele u. a.). Werden nie angezeigt, auch nicht als 'weitere Sender'. Regex, case-insensitive.",
+  "patterns": [
+    "Persiana", "GEM ?Sport", "IRIB", "Varzesh", "Meraj", "Solh", "4Sports", "Pokertv",
+    "Tolo", "Ariana", "Lemar", "^3 Sport", "^AVA ", "Varzish", "Futbol ?TV", "^ftv"
+  ]
+}
