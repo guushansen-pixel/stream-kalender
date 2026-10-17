@@ -123,6 +123,9 @@ const ALL = 'ALL'; // "Ich bin ueberall": alle Laender auf einmal
 const DATA_KEY = 'streamkal.data.v1';
 
 const SPORTS = { football: 'Fußball', basketball: 'Basketball', handball: 'Handball', boxing: 'Boxen', darts: 'Darts' };
+// Wie lange ein Termin nach Beginn noch angezeigt wird (Stunden). Box-Abende beginnen
+// mit dem Vorprogramm, der Hauptkampf steigt oft erst Stunden spaeter.
+const DURATION_H = { football: 2.5, basketball: 2.5, handball: 2.5, boxing: 6, darts: 6 };
 const RANGES = { today: 'Heute', tomorrow: 'Morgen', week: '7 Tage', month: '30 Tage', all: 'Alle' };
 const ACCESS = { free: '', 'free-reg': 'kostenlose Registrierung', partial: 'nur ausgewählte Spiele gratis' };
 
@@ -211,7 +214,7 @@ function inRange(m) {
   const start = new Date(); start.setHours(0, 0, 0, 0);
   const ko = Date.parse(m.ko), end = Date.parse(m.end || m.ko) + 3 * 3600e3;
   const day = 86400e3, s = start.getTime();
-  if (!m.end && ko + 2.5 * 3600e3 < Date.now()) return false;
+  if (!m.end && ko + (DURATION_H[m.sport] || 3) * 3600e3 < Date.now()) return false;
   if (m.end && Date.parse(m.end) < Date.now()) return false;
   switch (prefs.range) {
     case 'today': return ko < s + day && end >= s;
@@ -243,7 +246,7 @@ function cardHtml(m) {
   const de = c !== 'DE' ? offersIn(m, 'DE').sort(sortOffers) : [];
   const elsewhere = {};
   for (const o of m.offers) if (o.c !== c && o.c !== 'DE' && data.channels[o.ch]) (elsewhere[o.c] ||= []).push(o);
-  const payHere = m.pay?.[c] || [];
+  const payHere = [...(m.pay?.[c] || []), ...(m.pay?.['?'] || [])];
   const payDe = c !== 'DE' ? (m.pay?.DE || []) : [];
 
   let h = `<article class="card">${headHtml(m)}
@@ -280,7 +283,7 @@ function cardAllHtml(m) {
   const list = [...groups.values()].map((g) => ({ ...g, cs: g.cs.sort((a, b) => (a === 'DE' ? -1 : b === 'DE' ? 1 : byName(a, b))) }))
     .sort((a, b) => (b.cs.includes('DE') - a.cs.includes('DE')) || sortOffers(a.o, b.o) || byName(a.cs[0], b.cs[0]));
   const nCountries = new Set(m.offers.map((o) => o.c)).size;
-  const payDe = m.pay?.DE || [];
+  const payDe = [...(m.pay?.DE || []), ...(m.pay?.['?'] || [])];
   return `<article class="card">${headHtml(m)}
     <div class="sect"><h3>🌍 Frei in ${nCountries} ${nCountries === 1 ? 'Land' : 'Ländern'}</h3>
       ${list.length ? `<div class="offers">${list.map((g) => offerHtml(g.o, g.cs)).join('')}</div>` : '<div class="none">Kein freies Angebot bekannt.</div>'}
