@@ -119,6 +119,7 @@
 const DATA_URL = 'https://raw.githubusercontent.com/guushansen-pixel/stream-kalender/main/data/matches.json';
 const LOCAL_URLS = ['data/matches.json', '../data/matches.json'];
 const PREFS_KEY = 'streamkal.prefs.v1';
+const ALL = 'ALL'; // "Ich bin ueberall": alle Laender auf einmal
 const DATA_KEY = 'streamkal.data.v1';
 
 const SPORTS = { football: 'Fußball', basketball: 'Basketball', handball: 'Handball', boxing: 'Boxen', darts: 'Darts' };
@@ -182,7 +183,8 @@ function countryOptions() {
 
 function buildControls() {
   const sel = $('country');
-  sel.innerHTML = countryOptions().map((c) => `<option value="${c}">${flag(c)} ${esc(data.countries[c])}</option>`).join('');
+  sel.innerHTML = `<option value="${ALL}">🌍 Überall (alle Länder)</option>` +
+    countryOptions().map((c) => `<option value="${c}">${flag(c)} ${esc(data.countries[c])}</option>`).join('');
   sel.value = prefs.country;
   if (sel.value !== prefs.country) { prefs.country = 'DE'; sel.value = 'DE'; }
   sel.onchange = () => { prefs.country = sel.value; savePrefs(); render(); };
@@ -191,7 +193,7 @@ function buildControls() {
   $('rangeChips').onclick = (e) => { const b = e.target.closest('[data-range]'); if (!b) return; prefs.range = b.dataset.range; savePrefs(); render(); };
 
   $('filterChips').innerHTML =
-    `<button class="chip" data-flag="onlyFree" aria-pressed="${prefs.onlyFree}">Nur frei hier</button>` +
+    `<button class="chip" data-flag="onlyFree" aria-pressed="${prefs.onlyFree}">${prefs.country === ALL ? 'Nur mit Gratis-Angebot' : 'Nur frei hier'}</button>` +
     `<button class="chip" data-flag="onlyGerman" aria-pressed="${prefs.onlyGerman}">Nur deutsche Teams</button>` +
     Object.entries(SPORTS).map(([k, v]) => `<button class="chip" data-sport="${k}" aria-pressed="${prefs.sports.includes(k)}">${v}</button>`).join('');
   $('filterChips').onclick = (e) => {
@@ -222,10 +224,11 @@ function inRange(m) {
 
 const offersIn = (m, c) => m.offers.filter((o) => o.c === c && data.channels[o.ch]);
 
-function offerHtml(o) {
+function offerHtml(o, countries) {
   const ch = data.channels[o.ch];
   const sure = o.conf === 'sicher';
-  const extra = [ACCESS[ch.access], ch.lang && ch.lang !== 'de' ? ch.lang.toUpperCase() : '', o.note || ch.note].filter(Boolean).join(' · ');
+  const where = countries ? countries.map((x) => `${flag(x)} ${data.countries[x] || x}`).join(', ') : '';
+  const extra = [where, ACCESS[ch.access], ch.lang && ch.lang !== 'de' ? ch.lang.toUpperCase() : '', o.note || ch.note].filter(Boolean).join(' · ');
   return `<a class="offer ${sure ? '' : 'maybe'}" href="${esc(ch.url)}" target="_blank" rel="noopener">
       <span class="name">${esc(o.label || ch.name)}${extra ? `<small>${esc(extra)}</small>` : ''}</span>
       <span class="badge ${sure ? 'sure' : 'maybe'}">${sure ? 'sicher' : 'möglich'}</span></a>`;
@@ -235,21 +238,15 @@ const sortOffers = (a, b) => (a.conf === b.conf ? 0 : a.conf === 'sicher' ? -1 :
 
 function cardHtml(m) {
   const c = prefs.country;
-  const d = new Date(m.ko);
-  const time = m.tbc ? 'offen' : d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
-  const comp = data.comps[m.comp]?.name || m.comp;
+  if (c === ALL) return cardAllHtml(m);
   const here = offersIn(m, c).sort(sortOffers);
   const de = c !== 'DE' ? offersIn(m, 'DE').sort(sortOffers) : [];
   const elsewhere = {};
   for (const o of m.offers) if (o.c !== c && o.c !== 'DE' && data.channels[o.ch]) (elsewhere[o.c] ||= []).push(o);
   const payHere = m.pay?.[c] || [];
   const payDe = c !== 'DE' ? (m.pay?.DE || []) : [];
-  const title = m.away ? `${esc(m.home)} – ${esc(m.away)}` : esc(m.home);
 
-  let h = `<article class="card">
-    <div class="meta"><span class="time">${time}</span><span>${esc(SPORTS[m.sport] || '')}</span><span class="comp">${esc(comp)}</span></div>
-    <div class="teams">${title}</div>
-    ${m.stage || m.venue ? `<div class="stage">${esc([m.stage, m.venue].filter(Boolean).join(' · '))}</div>` : ''}
+  let h = `<article class="card">${headHtml(m)}
     <div class="sect"><h3>${flag(c)} Frei in ${esc(data.countries[c])}</h3>
       ${here.length ? `<div class="offers">${here.map(offerHtml).join('')}</div>` : '<div class="none">Kein freies Angebot bekannt.</div>'}
       ${payHere.length ? `<div class="pay">Pay: ${esc(payHere.slice(0, 6).join(', '))}${payHere.length > 6 ? ' …' : ''}</div>` : ''}
@@ -269,6 +266,37 @@ function cardHtml(m) {
   return h + '</article>';
 }
 
+// Ueberall-Modus: jedes Angebot einmal, mit allen Laendern, in denen es frei ist.
+// Deutschland zuerst, dann 'sicher' vor 'moeglich'.
+function cardAllHtml(m) {
+  const groups = new Map();
+  for (const o of m.offers) {
+    if (!data.channels[o.ch]) continue;
+    const k = o.ch + '|' + o.conf + '|' + (o.label || '');
+    if (!groups.has(k)) groups.set(k, { o, cs: [] });
+    groups.get(k).cs.push(o.c);
+  }
+  const byName = (a, b) => (data.countries[a] || a).localeCompare(data.countries[b] || b, 'de');
+  const list = [...groups.values()].map((g) => ({ ...g, cs: g.cs.sort((a, b) => (a === 'DE' ? -1 : b === 'DE' ? 1 : byName(a, b))) }))
+    .sort((a, b) => (b.cs.includes('DE') - a.cs.includes('DE')) || sortOffers(a.o, b.o) || byName(a.cs[0], b.cs[0]));
+  const nCountries = new Set(m.offers.map((o) => o.c)).size;
+  const payDe = m.pay?.DE || [];
+  return `<article class="card">${headHtml(m)}
+    <div class="sect"><h3>🌍 Frei in ${nCountries} ${nCountries === 1 ? 'Land' : 'Ländern'}</h3>
+      ${list.length ? `<div class="offers">${list.map((g) => offerHtml(g.o, g.cs)).join('')}</div>` : '<div class="none">Kein freies Angebot bekannt.</div>'}
+      ${payDe.length ? `<div class="pay">Pay in Deutschland: ${esc(payDe.slice(0, 6).join(', '))}</div>` : ''}
+    </div>${m.note ? `<div class="stage" style="margin-top:8px">${esc(m.note)}</div>` : ''}</article>`;
+}
+
+function headHtml(m) {
+  const time = m.tbc ? 'offen' : new Date(m.ko).toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' });
+  const comp = data.comps[m.comp]?.name || m.comp;
+  const title = m.away ? `${esc(m.home)} – ${esc(m.away)}` : esc(m.home);
+  return `<div class="meta"><span class="time">${time}</span><span>${esc(SPORTS[m.sport] || '')}</span><span class="comp">${esc(comp)}</span></div>
+    <div class="teams">${title}</div>
+    ${m.stage || m.venue ? `<div class="stage">${esc([m.stage, m.venue].filter(Boolean).join(' · '))}</div>` : ''}`;
+}
+
 function render() {
   if (!data) return;
   buildControls();
@@ -276,7 +304,7 @@ function render() {
   const items = data.matches.filter((m) =>
     prefs.sports.includes(m.sport) && inRange(m) &&
     (!prefs.onlyGerman || m.de) &&
-    (!prefs.onlyFree || offersIn(m, c).length));
+    (!prefs.onlyFree || (c === ALL ? m.offers.length : offersIn(m, c).length)));
   if (!items.length) {
     $('list').innerHTML = '<p class="empty">Keine Termine für diese Auswahl.</p>';
     return;
