@@ -1,19 +1,11 @@
 # Stream-Kalender
 
-Wo läuft das Spiel **legal und kostenlos**, zu Hause oder im Urlaub? Der Kalender zeigt für
-Bundesliga, DFB-Pokal, Champions League, Länderspiele, EuroLeague, Handball- und
-Basketball-Nationalteams, Box- und Darts-WM pro Spiel die freien Angebote im Land, in dem du
-gerade bist – oder „Überall“, um alle Länder auf einmal zu sehen. Verlinkt sind nur offizielle Sender, Mediatheken und YouTube-Kanäle.
+Sportkalender (Fußball, Basketball, Handball, Boxen, Darts) mit den frei empfangbaren
+TV- und Streaming-Angeboten der offiziellen Rechteinhaber, nach Land filterbar.
 
 **Download:** [stream-kalender-1.1.apk](dist/stream-kalender-1.1.apk)
 
-- **sicher**: für dieses Spiel angekündigt oder in den Programmlisten gefunden.
-- **möglich**: der Sender zeigt den Wettbewerb in diesem Land, aber nicht unbedingt dieses
-  Spiel. Kurz vorher im Programm prüfen.
-
-Die Daten werden zweimal täglich per GitHub Action aktualisiert (`data/matches.json`).
+Die Daten (`data/matches.json`) werden zweimal täglich per GitHub Action aktualisiert.
 
 Quellen: [OpenLigaDB](https://www.openligadb.de/) (ODbL), EuroLeague-API,
-[liveonsat.com](https://liveonsat.com/), offizielle Rechtehalter-Listen (Bundesliga, UEFA,
-DFB, FIBA, IHF) und eigene Recherche. Keine Gewähr, denn Rechte und Programme ändern sich
-kurzfristig.
+[liveonsat.com](https://liveonsat.com/), Senderlisten der Rechteinhaber. Keine Gewähr.

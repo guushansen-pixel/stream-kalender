@@ -3,8 +3,10 @@
 // legal - das entscheidet erst channels.json), _not_free = verschluesselt, _iptvcable = Stream.
 import { get, decodeEntities } from './util.mjs';
 
+// Eintrag = Hauptseite, optional mit Ersatzseiten, falls sie abgewiesen wird (aus GitHub-
+// Actions-IPs kam fuer die grosse Deutschland-Seite schon ein 403, die Einzelseiten gingen).
 const PAGES = [
-  'europe-germany-all-football', // 1.-3. Liga + DFB-Pokal, mehrere Wochen voraus
+  ['europe-germany-all-football', 'europe-germany-bundesliga1', 'europe-germany-bundesliga2', 'europe-germany-dfb-Pokal'], // 1.-3. Liga + DFB-Pokal
   'club-uefa-champions-league',
   'club-uefa-europa-league',
   'club-uefa-europa-conference-league',
@@ -57,12 +59,21 @@ export function parseLiveonsat(html) {
 
 export async function fetchLiveonsat({ log }) {
   const all = [], errors = [];
-  for (const p of PAGES) {
+  const load = async (p) => {
+    try { return await get(`https://liveonsat.com/${p}.php`); } catch {
+      // ein zweiter Versuch nach kurzer Pause, dann aufgeben
+      return get(`https://liveonsat.com/${p}.php`, { gapMs: 15000 });
+    }
+  };
+  for (const entry of PAGES) {
+    const [main, ...fallbacks] = [].concat(entry);
     try {
-      const items = parseLiveonsat(await get(`https://liveonsat.com/${p}.php`));
-      all.push(...items);
+      all.push(...parseLiveonsat(await load(main)));
     } catch (e) {
-      errors.push(`liveonsat ${p}: ${e.message}`);
+      errors.push(`liveonsat ${main}: ${e.message}${fallbacks.length ? ' - nutze Einzelseiten' : ''}`);
+      for (const f of fallbacks) {
+        try { all.push(...parseLiveonsat(await load(f))); } catch (e2) { errors.push(`liveonsat ${f}: ${e2.message}`); }
+      }
     }
   }
   log(`liveonsat: ${all.length} Eintraege`);
