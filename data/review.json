@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19T20:24:44.054Z",
+ "generatedAt": "2026-10-20T09:50:15.934Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -145,7 +145,17 @@
    "example": "Sabah – Borussia Dortmund (ucl)"
   },
   {
+   "name": "MTV Urheilu 1 Suomi HD",
+   "count": 2,
+   "example": "Sabah – Borussia Dortmund (ucl)"
+  },
+  {
    "name": "New World Sport 3 Togo",
+   "count": 2,
+   "example": "Sabah – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "Silk Universal HD",
    "count": 2,
    "example": "Sabah – Borussia Dortmund (ucl)"
   },
@@ -156,6 +166,11 @@
   },
   {
    "name": "Blue Sport 9 Live HD",
+   "count": 2,
+   "example": "Fenerbahçe SK – Slavia Prag (ucl)"
+  },
+  {
+   "name": "MTV Urheilu 2 Suomi HD",
    "count": 2,
    "example": "Fenerbahçe SK – Slavia Prag (ucl)"
   },
@@ -340,14 +355,34 @@
    "example": "Paris St. Germain – FC Barcelona (ucl)"
   },
   {
+   "name": "5 LIVE Israel HD",
+   "count": 1,
+   "example": "Sabah – Borussia Dortmund (ucl)"
+  },
+  {
    "name": "Sport 1 Hungary HD",
    "count": 1,
    "example": "Sabah – Borussia Dortmund (ucl)"
   },
   {
+   "name": "5 STARS Israel HD",
+   "count": 1,
+   "example": "Manchester City – AEK Athen (ucl)"
+  },
+  {
+   "name": "MTV Urheilu 3 Suomi HD",
+   "count": 1,
+   "example": "Manchester City – AEK Athen (ucl)"
+  },
+  {
    "name": "New World Sport 4 Togo",
    "count": 1,
    "example": "VfB Stuttgart – Atletico Madrid (ucl)"
+  },
+  {
+   "name": "5 PLUS Israel HD",
+   "count": 1,
+   "example": "FC Liverpool – Villarreal CF (ucl)"
   },
   {
    "name": "New World Sport 5 Togo",
@@ -368,6 +403,16 @@
    "name": "New World Sport 6 Togo",
    "count": 1,
    "example": "SSC Napoli  – FK Bodö/Glimt (ucl)"
+  },
+  {
+   "name": "5 SPORT Israel HD",
+   "count": 1,
+   "example": "Paris St. Germain – FC Barcelona (ucl)"
+  },
+  {
+   "name": "MTV Sub Suomi",
+   "count": 1,
+   "example": "Paris St. Germain – FC Barcelona (ucl)"
   },
   {
    "name": "New World Sport 1 Mauritius",
