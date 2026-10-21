@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-21T09:52:31.962Z",
+ "generatedAt": "2026-10-21T19:08:56.514Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -11,6 +11,11 @@
    "name": "CBC Sport HD",
    "count": 2,
    "example": "Lille OSC – Galatasaray Istanbul (ucl)"
+  },
+  {
+   "name": "La Nouvelle Chaîne Ivorienne",
+   "count": 1,
+   "example": "Como 1907 – Manchester United FC (ucl)"
   }
  ],
  "otherUnknown": [
@@ -35,6 +40,11 @@
    "example": "FC Brügge – RC Lens (ucl)"
   },
   {
+   "name": "5 PLUS Israel HD",
+   "count": 2,
+   "example": "Como 1907 – Manchester United FC (ucl)"
+  },
+  {
    "name": "ART Motion Sport 1 HD",
    "count": 2,
    "example": "Como 1907 – Manchester United FC (ucl)"
@@ -51,6 +61,11 @@
   },
   {
    "name": "MTV Urheilu 1 Suomi HD",
+   "count": 2,
+   "example": "Como 1907 – Manchester United FC (ucl)"
+  },
+  {
+   "name": "New World Sport 2 Mauritius",
    "count": 2,
    "example": "Como 1907 – Manchester United FC (ucl)"
   },
@@ -90,6 +105,11 @@
    "example": "Como 1907 – Manchester United FC (ucl)"
   },
   {
+   "name": "TUDN Español USA",
+   "count": 2,
+   "example": "Como 1907 – Manchester United FC (ucl)"
+  },
+  {
    "name": "We Sport Moldova",
    "count": 2,
    "example": "Como 1907 – Manchester United FC (ucl)"
@@ -116,6 +136,11 @@
   },
   {
    "name": "MTV Urheilu 2 Suomi HD",
+   "count": 2,
+   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
+  },
+  {
+   "name": "New World Sport 3 Togo",
    "count": 2,
    "example": "Lille OSC – Galatasaray Istanbul (ucl)"
   },
@@ -165,9 +190,19 @@
    "example": "Lille OSC – Galatasaray Istanbul (ucl)"
   },
   {
+   "name": "Silk Sport 1 HD",
+   "count": 1,
+   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
+  },
+  {
    "name": "SuperSport MáXimo 2A HD",
    "count": 1,
    "example": "Lille OSC – Galatasaray Istanbul (ucl)"
+  },
+  {
+   "name": "5 SPORT Israel HD",
+   "count": 1,
+   "example": "Real Madrid – RB Leipzig (ucl)"
   },
   {
    "name": "Blue Sport 4 Live HDR",
@@ -185,7 +220,17 @@
    "example": "Real Madrid – RB Leipzig (ucl)"
   },
   {
+   "name": "New World Sport 1 Mauritius",
+   "count": 1,
+   "example": "Real Madrid – RB Leipzig (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 4 HD",
+   "count": 1,
+   "example": "Real Madrid – RB Leipzig (ucl)"
+  },
+  {
+   "name": "Silk Sport 3 HD",
    "count": 1,
    "example": "Real Madrid – RB Leipzig (ucl)"
   },
@@ -193,6 +238,11 @@
    "name": "SuperSport MáXimo 3A HD",
    "count": 1,
    "example": "Real Madrid – RB Leipzig (ucl)"
+  },
+  {
+   "name": "5 STARS Israel HD",
+   "count": 1,
+   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
   },
   {
    "name": "Cytavision Sports 5 HD",
@@ -211,6 +261,16 @@
   },
   {
    "name": "Q Sport Arena HD",
+   "count": 1,
+   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
+  },
+  {
+   "name": "Silk Sport 2 HD",
+   "count": 1,
+   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
+  },
+  {
+   "name": "Sony Sports TEN 5 India HD",
    "count": 1,
    "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
   },
@@ -300,6 +360,11 @@
    "example": "Aston Villa – Viking (ucl)"
   },
   {
+   "name": "New World Sport 5 Togo",
+   "count": 1,
+   "example": "Aston Villa – Viking (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 7 HD",
    "count": 1,
    "example": "Aston Villa – Viking (ucl)"
@@ -321,6 +386,11 @@
   },
   {
    "name": "Blue Sport 5 Live HD",
+   "count": 1,
+   "example": "Sporting CP – LASK (ucl)"
+  },
+  {
+   "name": "New World Sport 6 Togo",
    "count": 1,
    "example": "Sporting CP – LASK (ucl)"
   },
@@ -351,6 +421,11 @@
   },
   {
    "name": "Cytavision Sports 7 HD",
+   "count": 1,
+   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
+  },
+  {
+   "name": "New World Sport 4 Togo",
    "count": 1,
    "example": "Real Betis – Feyenoord Rotterdam (ucl)"
   },
