@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-22T09:52:41.498Z",
+ "generatedAt": "2026-10-22T19:04:25.805Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [],
  "otherUnknown": [
@@ -29,9 +29,24 @@
    "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
   },
   {
+   "name": "New World Sport 4 Togo",
+   "count": 1,
+   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
+  },
+  {
    "name": "Sony Sports TEN 1 India HD",
    "count": 1,
    "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
+  },
+  {
+   "name": "ART Motion Sport 1 HD",
+   "count": 1,
+   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
+  },
+  {
+   "name": "New World Sport 1 Mauritius",
+   "count": 1,
+   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
   },
   {
    "name": "Q Sport Football HD",
