@@ -1,438 +1,12 @@
 {
- "generatedAt": "2026-10-21T19:08:56.514Z",
+ "generatedAt": "2026-10-22T09:52:41.498Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [
-  {
-   "name": "Ictimai TV HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "CBC Sport HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "La Nouvelle Chaîne Ivorienne",
-   "count": 1,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  }
- ],
+ "ftaUnknown": [],
  "otherUnknown": [
   {
-   "name": "Cytavision Sports 4K 1 UHD",
-   "count": 3,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Cytavision Sports PPV 3 HD",
-   "count": 3,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 1 India HD",
-   "count": 3,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
    "name": "Blue Sport 2 Live HD",
-   "count": 3,
-   "example": "FC Brügge – RC Lens (ucl)"
-  },
-  {
-   "name": "5 PLUS Israel HD",
    "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 1 HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 3 HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Digi 4K UHD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 1 Suomi HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "New World Sport 2 Mauritius",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 2 HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Q Sport League HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Silk Universal HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 2 India HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Sport 2 Hungary HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "SuperSport Football Plus HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 1 HD",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "TUDN Español USA",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "We Sport Moldova",
-   "count": 2,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 2 HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4 HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4K 2 UHD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "Cytavision Sports PPV 4 HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 2 Suomi HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "New World Sport 3 Togo",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 3 HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "SuperSport Premier League HD",
-   "count": 2,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "TVNet Sport Azerbaijan",
-   "count": 2,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HD",
-   "count": 2,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Q Sport Football HD",
-   "count": 2,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "SuperSport Football HD",
-   "count": 2,
-   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
-  },
-  {
-   "name": "Blue Sport 2 Live HDR",
-   "count": 1,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Blue Sport 8 Live HD",
-   "count": 1,
-   "example": "Como 1907 – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Blue Sport 9 Live HD",
-   "count": 1,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "Silk Sport 1 HD",
-   "count": 1,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 2A HD",
-   "count": 1,
-   "example": "Lille OSC – Galatasaray Istanbul (ucl)"
-  },
-  {
-   "name": "5 SPORT Israel HD",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HDR",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "Blue Sport 6 Live HD",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "Blue Sport D 2 HD",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "New World Sport 1 Mauritius",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 4 HD",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "Silk Sport 3 HD",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 3A HD",
-   "count": 1,
-   "example": "Real Madrid – RB Leipzig (ucl)"
-  },
-  {
-   "name": "5 STARS Israel HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 5 HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "MTV MAX Suomi HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 6 HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Q Sport Arena HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Silk Sport 2 HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 5 India HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Sport 1 Hungary HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "SuperSport Kickoff HD",
-   "count": 1,
-   "example": "Inter Mailand – Shakhtar Donetsk (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live UHD",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HDR",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Blue Sport D 1 HD",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Kanal A Slovenija HD",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 3 India HD",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 4 India HD",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "TOP Channel HD",
-   "count": 1,
-   "example": "FC Bayern München – FC Arsenal (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 5 HD",
-   "count": 1,
-   "example": "FC Brügge – RC Lens (ucl)"
-  },
-  {
-   "name": "RTL Club Belgique",
-   "count": 1,
-   "example": "FC Brügge – RC Lens (ucl)"
-  },
-  {
-   "name": "SuperSport Extra HD",
-   "count": 1,
-   "example": "FC Brügge – RC Lens (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 4 HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 6 HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "Cytavision Sports PPV 2 HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 3 Suomi HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "New World Sport 5 Togo",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 7 HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "SuperSport Action HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "SuperSport PSL HD",
-   "count": 1,
-   "example": "Aston Villa – Viking (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 6 HD",
-   "count": 1,
-   "example": "Sporting CP – LASK (ucl)"
-  },
-  {
-   "name": "Blue Sport 5 Live HD",
-   "count": 1,
-   "example": "Sporting CP – LASK (ucl)"
-  },
-  {
-   "name": "New World Sport 6 Togo",
-   "count": 1,
-   "example": "Sporting CP – LASK (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 8",
-   "count": 1,
-   "example": "Sporting CP – LASK (ucl)"
-  },
-  {
-   "name": "SuperSport LaLiga HD",
-   "count": 1,
-   "example": "Sporting CP – LASK (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 360",
-   "count": 1,
-   "example": "Sporting CP – LASK (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 3 HD",
-   "count": 1,
-   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HD",
-   "count": 1,
-   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 7 HD",
-   "count": 1,
-   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
-  },
-  {
-   "name": "New World Sport 4 Togo",
-   "count": 1,
-   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 5 HD",
-   "count": 1,
-   "example": "Real Betis – Feyenoord Rotterdam (ucl)"
+   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
   },
   {
    "name": "Blue Sport 12 Live HD",
@@ -440,9 +14,54 @@
    "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
   },
   {
+   "name": "Cytavision Sports 4 HD",
+   "count": 1,
+   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
+  },
+  {
+   "name": "Cytavision Sports 4K 1 UHD",
+   "count": 1,
+   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
+  },
+  {
+   "name": "Cytavision Sports PPV 3 HD",
+   "count": 1,
+   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
+  },
+  {
+   "name": "Sony Sports TEN 1 India HD",
+   "count": 1,
+   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
+  },
+  {
+   "name": "Q Sport Football HD",
+   "count": 1,
+   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
+  },
+  {
+   "name": "SuperSport Football HD",
+   "count": 1,
+   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
+  },
+  {
+   "name": "TVNet Sport Azerbaijan",
+   "count": 1,
+   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
+  },
+  {
    "name": "Blue Sport 16 Live HD",
    "count": 1,
    "example": "Viktoria Pilsen – Levski Sofia (uel)"
+  },
+  {
+   "name": "Sport 1 Czechia HD",
+   "count": 1,
+   "example": "Viktoria Pilsen – Levski Sofia (uel)"
+  },
+  {
+   "name": "Blue Sport 3 Live HD",
+   "count": 1,
+   "example": "AS Monaco – SC Freiburg (uecl)"
   },
   {
    "name": "Cytavision Sports 8 HD",
