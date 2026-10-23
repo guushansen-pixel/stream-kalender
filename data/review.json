@@ -1,8 +1,24 @@
 {
- "generatedAt": "2026-10-23T09:46:22.999Z",
+ "generatedAt": "2026-10-23T18:54:32.779Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [],
+ "ftaUnknown": [
+  {
+   "name": "Idman TV HD",
+   "count": 1,
+   "example": "VfB Stuttgart – Borussia Mönchengladbach (bl1)"
+  },
+  {
+   "name": "AzTV HD Azerbaijan",
+   "count": 1,
+   "example": "SC Freiburg – FC Bayern München (bl1)"
+  }
+ ],
  "otherUnknown": [
+  {
+   "name": "Blue Sport 1 Live HD",
+   "count": 1,
+   "example": "Real Madrid – Fenerbahce Tarfin Istanbul (el)"
+  },
   {
    "name": "Blue Sport 2 Live HD",
    "count": 1,
@@ -11,6 +27,7 @@
  ],
  "unknownSlugs": [],
  "errors": [
-  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
+  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten",
+  "liveonsat international-uefa-nations-league: 521 https://liveonsat.com/international-uefa-nations-league.php"
  ]
 }
