@@ -1,92 +1,12 @@
 {
- "generatedAt": "2026-10-22T19:04:25.805Z",
+ "generatedAt": "2026-10-23T09:46:22.999Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [],
  "otherUnknown": [
   {
    "name": "Blue Sport 2 Live HD",
-   "count": 2,
-   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
-  },
-  {
-   "name": "Blue Sport 12 Live HD",
    "count": 1,
-   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Cytavision Sports 4 HD",
-   "count": 1,
-   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Cytavision Sports 4K 1 UHD",
-   "count": 1,
-   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Cytavision Sports PPV 3 HD",
-   "count": 1,
-   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "New World Sport 4 Togo",
-   "count": 1,
-   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Sony Sports TEN 1 India HD",
-   "count": 1,
-   "example": "OFI Kreta – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "ART Motion Sport 1 HD",
-   "count": 1,
-   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
-  },
-  {
-   "name": "New World Sport 1 Mauritius",
-   "count": 1,
-   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
-  },
-  {
-   "name": "Q Sport Football HD",
-   "count": 1,
-   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
-  },
-  {
-   "name": "SuperSport Football HD",
-   "count": 1,
-   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
-  },
-  {
-   "name": "TVNet Sport Azerbaijan",
-   "count": 1,
-   "example": "TSG Hoffenheim – Olympique Lyon (uel)"
-  },
-  {
-   "name": "Blue Sport 16 Live HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Levski Sofia (uel)"
-  },
-  {
-   "name": "Sport 1 Czechia HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Levski Sofia (uel)"
-  },
-  {
-   "name": "Blue Sport 3 Live HD",
-   "count": 1,
-   "example": "AS Monaco – SC Freiburg (uecl)"
-  },
-  {
-   "name": "Cytavision Sports 8 HD",
-   "count": 1,
-   "example": "AS Monaco – SC Freiburg (uecl)"
-  },
-  {
-   "name": "Blue Sport 23 Live HD",
-   "count": 1,
-   "example": "Partizan Mozzart Bet Belgrade – Crvena Zvezda Meridianbet Belgrade (el)"
+   "example": "FC Bayern Munich – FC Barcelona (el)"
   }
  ],
  "unknownSlugs": [],
