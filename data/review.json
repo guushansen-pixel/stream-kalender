@@ -1,12 +1,7 @@
 {
- "generatedAt": "2026-10-23T18:54:32.779Z",
+ "generatedAt": "2026-10-24T09:20:04.655Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
-  {
-   "name": "Idman TV HD",
-   "count": 1,
-   "example": "VfB Stuttgart – Borussia Mönchengladbach (bl1)"
-  },
   {
    "name": "AzTV HD Azerbaijan",
    "count": 1,
@@ -27,7 +22,6 @@
  ],
  "unknownSlugs": [],
  "errors": [
-  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten",
-  "liveonsat international-uefa-nations-league: 521 https://liveonsat.com/international-uefa-nations-league.php"
+  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ]
 }
