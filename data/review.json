@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-24T09:20:04.655Z",
+ "generatedAt": "2026-10-24T17:54:56.216Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -9,6 +9,11 @@
   }
  ],
  "otherUnknown": [
+  {
+   "name": "TVNet Sport Azerbaijan",
+   "count": 1,
+   "example": "Borussia Dortmund – Eintracht Frankfurt (bl1)"
+  },
   {
    "name": "Blue Sport 1 Live HD",
    "count": 1,
