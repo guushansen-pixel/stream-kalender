@@ -3,7 +3,7 @@
 Sportkalender (Fußball, Basketball, Handball, Boxen, Darts) mit den frei empfangbaren
 TV- und Streaming-Angeboten der offiziellen Rechteinhaber, nach Land filterbar.
 
-**Download:** [stream-kalender-1.2.apk](dist/stream-kalender-1.2.apk)
+**Download:** [stream-kalender-1.3.apk](dist/stream-kalender-1.3.apk)
 
 Die Daten (`data/matches.json`) werden zweimal täglich per GitHub Action aktualisiert.
 
