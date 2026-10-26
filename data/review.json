@@ -1,13 +1,7 @@
 {
- "generatedAt": "2026-10-25T18:13:13.380Z",
+ "generatedAt": "2026-10-26T10:48:42.617Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [
-  {
-   "name": "AzTV HD Azerbaijan",
-   "count": 1,
-   "example": "SC Freiburg – FC Bayern München (bl1)"
-  }
- ],
+ "ftaUnknown": [],
  "otherUnknown": [
   {
    "name": "Como TV",
@@ -23,6 +17,11 @@
    "name": "Blue Sport 2 Live HD",
    "count": 1,
    "example": "FC Bayern Munich – FC Barcelona (el)"
+  },
+  {
+   "name": "Sport 2 Czechia HD",
+   "count": 1,
+   "example": "Bayer Leverkusen – Marseille (uel)"
   }
  ],
  "unknownSlugs": [],
