@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T10:48:42.617Z",
+ "generatedAt": "2026-10-26T20:20:13.561Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [],
  "otherUnknown": [
@@ -9,14 +9,89 @@
    "example": "1. FC Köln – 1. FC Union Berlin (dfb)"
   },
   {
-   "name": "Blue Sport 1 Live HD",
-   "count": 1,
-   "example": "Real Madrid – Fenerbahce Tarfin Istanbul (el)"
+   "name": "Blue Sport 2 Live HD",
+   "count": 3,
+   "example": "Feyenoord Rotterdam – Inter Mailand (ucl)"
   },
   {
-   "name": "Blue Sport 2 Live HD",
-   "count": 1,
-   "example": "FC Bayern Munich – FC Barcelona (el)"
+   "name": "Blue Sport 1 Live HD",
+   "count": 3,
+   "example": "Manchester United FC – AS Rom (ucl)"
+  },
+  {
+   "name": "VOOsport World 2 HD",
+   "count": 3,
+   "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
+  },
+  {
+   "name": "Blue Sport 9 Live HD",
+   "count": 2,
+   "example": "Shakhtar Donetsk – Sporting CP (ucl)"
+  },
+  {
+   "name": "Blue Sport 8 Live HD",
+   "count": 2,
+   "example": "Galatasaray Istanbul – VfB Stuttgart (ucl)"
+  },
+  {
+   "name": "Blue Sport 1 Live UHD",
+   "count": 2,
+   "example": "FC Barcelona – Aston Villa (ucl)"
+  },
+  {
+   "name": "Blue Sport 2 Live HDR",
+   "count": 2,
+   "example": "FC Barcelona – Aston Villa (ucl)"
+  },
+  {
+   "name": "Blue Sport D 1 HD",
+   "count": 2,
+   "example": "FC Barcelona – Aston Villa (ucl)"
+  },
+  {
+   "name": "Blue Sport 3 Live HDR",
+   "count": 2,
+   "example": "Atletico Madrid – FC Bayern München (ucl)"
+  },
+  {
+   "name": "Blue Sport 6 Live HD",
+   "count": 2,
+   "example": "Atletico Madrid – FC Bayern München (ucl)"
+  },
+  {
+   "name": "Blue Sport D 2 HD",
+   "count": 2,
+   "example": "Atletico Madrid – FC Bayern München (ucl)"
+  },
+  {
+   "name": "RTL Club Belgique",
+   "count": 2,
+   "example": "Atletico Madrid – FC Bayern München (ucl)"
+  },
+  {
+   "name": "Blue Sport 3 Live HD",
+   "count": 2,
+   "example": "Villarreal CF – Paris St. Germain (ucl)"
+  },
+  {
+   "name": "Blue Sport 4 Live HDR",
+   "count": 2,
+   "example": "Manchester United FC – AS Rom (ucl)"
+  },
+  {
+   "name": "Blue Sport 4 Live HD",
+   "count": 2,
+   "example": "FK Bodö/Glimt – Lille OSC (ucl)"
+  },
+  {
+   "name": "Blue Sport 5 Live HD",
+   "count": 2,
+   "example": "LASK – Slovan Bratislava (ucl)"
+  },
+  {
+   "name": "VOOsport World 1 HD",
+   "count": 2,
+   "example": "Besiktas Istanbul – Olympiacos Piraeus (el)"
   },
   {
    "name": "Sport 2 Czechia HD",
