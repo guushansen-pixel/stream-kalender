@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-26T20:20:13.561Z",
+ "generatedAt": "2026-10-27T10:14:36.618Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [],
  "otherUnknown": [
@@ -24,6 +24,26 @@
    "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
   },
   {
+   "name": "5 SPORT Israel HD",
+   "count": 3,
+   "example": "Hapoel IBI Tel Aviv – Anadolu Efes Istanbul (el)"
+  },
+  {
+   "name": "Astro Football HD",
+   "count": 2,
+   "example": "Rot-Weiss Essen – RB Leipzig (dfb)"
+  },
+  {
+   "name": "Sport 1 Hungary HD",
+   "count": 2,
+   "example": "Hamburger SV – Eintracht Frankfurt (dfb)"
+  },
+  {
+   "name": "SuperSport ESPN 2 HD",
+   "count": 2,
+   "example": "Hamburger SV – Eintracht Frankfurt (dfb)"
+  },
+  {
    "name": "Blue Sport 9 Live HD",
    "count": 2,
    "example": "Shakhtar Donetsk – Sporting CP (ucl)"
@@ -45,6 +65,11 @@
   },
   {
    "name": "Blue Sport D 1 HD",
+   "count": 2,
+   "example": "FC Barcelona – Aston Villa (ucl)"
+  },
+  {
+   "name": "Kanal A Slovenija HD",
    "count": 2,
    "example": "FC Barcelona – Aston Villa (ucl)"
   },
@@ -92,6 +117,21 @@
    "name": "VOOsport World 1 HD",
    "count": 2,
    "example": "Besiktas Istanbul – Olympiacos Piraeus (el)"
+  },
+  {
+   "name": "Sport 2 Hungary HD",
+   "count": 1,
+   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
+  },
+  {
+   "name": "5 PLUS Israel HD",
+   "count": 1,
+   "example": "Kosner Baskonia Vitoria-Gasteiz – Real Madrid (el)"
+  },
+  {
+   "name": "5 STARS Israel HD",
+   "count": 1,
+   "example": "Panathinaikos AKTOR Athens – Armani Olimpia Milan (el)"
   },
   {
    "name": "Sport 2 Czechia HD",
