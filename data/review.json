@@ -1,7 +1,13 @@
 {
- "generatedAt": "2026-10-28T11:03:09.667Z",
+ "generatedAt": "2026-10-28T20:06:58.073Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [],
+ "ftaUnknown": [
+  {
+   "name": "La Chaine L´Équipe HD",
+   "count": 1,
+   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
+  }
+ ],
  "otherUnknown": [
   {
    "name": "Blue Sport 1 Live HD",
@@ -94,6 +100,21 @@
    "example": "LASK – Slovan Bratislava (ucl)"
   },
   {
+   "name": "5 MAX Israel HD",
+   "count": 2,
+   "example": "FC Barcelona – Valencia Basket (el)"
+  },
+  {
+   "name": "5 PLUS Israel HD",
+   "count": 2,
+   "example": "Olympiacos Piraeus – Armani Olimpia Milan (el)"
+  },
+  {
+   "name": "5 SPORT Israel HD",
+   "count": 2,
+   "example": "Dubai Basketball – Hapoel IBI Tel Aviv (el)"
+  },
+  {
    "name": "Astro Arena Bola HD",
    "count": 1,
    "example": "Bayer 04 Leverkusen – 1. FC Nürnberg (dfb)"
@@ -114,9 +135,19 @@
    "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
   },
   {
-   "name": "5 SPORT Israel HD",
+   "name": "SuperSport ESPN HD",
    "count": 1,
-   "example": "Hapoel IBI Tel Aviv – Anadolu Efes Istanbul (el)"
+   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
+  },
+  {
+   "name": "5 LIVE Israel HD",
+   "count": 1,
+   "example": "Real Madrid – Fenerbahce Tarfin Istanbul (el)"
+  },
+  {
+   "name": "5 STARS Israel HD",
+   "count": 1,
+   "example": "Crvena Zvezda Meridianbet Belgrade – FC Bayern Munich (el)"
   },
   {
    "name": "VOOsport World 1 HD",
