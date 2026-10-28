@@ -1,24 +1,8 @@
 {
- "generatedAt": "2026-10-27T19:53:28.008Z",
+ "generatedAt": "2026-10-28T11:03:09.667Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [
-  {
-   "name": "La Chaine L´Équipe HD",
-   "count": 1,
-   "example": "Borussia Dortmund – SV Werder Bremen (dfb)"
-  }
- ],
+ "ftaUnknown": [],
  "otherUnknown": [
-  {
-   "name": "Como TV",
-   "count": 6,
-   "example": "1. FC Köln – 1. FC Union Berlin (dfb)"
-  },
-  {
-   "name": "Blue Sport 2 Live HD",
-   "count": 3,
-   "example": "Feyenoord Rotterdam – Inter Mailand (ucl)"
-  },
   {
    "name": "Blue Sport 1 Live HD",
    "count": 3,
@@ -30,29 +14,9 @@
    "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
   },
   {
-   "name": "5 SPORT Israel HD",
-   "count": 3,
-   "example": "Hapoel IBI Tel Aviv – Anadolu Efes Istanbul (el)"
-  },
-  {
-   "name": "Astro Football HD",
+   "name": "Como TV",
    "count": 2,
-   "example": "Rot-Weiss Essen – RB Leipzig (dfb)"
-  },
-  {
-   "name": "Sport 1 Hungary HD",
-   "count": 2,
-   "example": "Hamburger SV – Eintracht Frankfurt (dfb)"
-  },
-  {
-   "name": "SuperSport ESPN 2 HD",
-   "count": 2,
-   "example": "Hamburger SV – Eintracht Frankfurt (dfb)"
-  },
-  {
-   "name": "Astro Sports UHD",
-   "count": 2,
-   "example": "Borussia Dortmund – SV Werder Bremen (dfb)"
+   "example": "Hannover 96 – 1. FC Kaiserslautern (dfb)"
   },
   {
    "name": "Blue Sport 9 Live HD",
@@ -63,6 +27,11 @@
    "name": "Blue Sport 8 Live HD",
    "count": 2,
    "example": "Galatasaray Istanbul – VfB Stuttgart (ucl)"
+  },
+  {
+   "name": "Blue Sport 2 Live HD",
+   "count": 2,
+   "example": "Feyenoord Rotterdam – Inter Mailand (ucl)"
   },
   {
    "name": "Blue Sport 1 Live UHD",
@@ -125,14 +94,19 @@
    "example": "LASK – Slovan Bratislava (ucl)"
   },
   {
-   "name": "VOOsport World 1 HD",
-   "count": 2,
-   "example": "Besiktas Istanbul – Olympiacos Piraeus (el)"
+   "name": "Astro Arena Bola HD",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – 1. FC Nürnberg (dfb)"
   },
   {
-   "name": "Ruutu+ Suomi",
-   "count": 2,
-   "example": "Kosner Baskonia Vitoria-Gasteiz – Real Madrid (el)"
+   "name": "Astro Football HD",
+   "count": 1,
+   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
+  },
+  {
+   "name": "Astro Sports UHD",
+   "count": 1,
+   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
   },
   {
    "name": "Sport 2 Hungary HD",
@@ -140,14 +114,14 @@
    "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
   },
   {
-   "name": "5 PLUS Israel HD",
+   "name": "5 SPORT Israel HD",
    "count": 1,
-   "example": "Kosner Baskonia Vitoria-Gasteiz – Real Madrid (el)"
+   "example": "Hapoel IBI Tel Aviv – Anadolu Efes Istanbul (el)"
   },
   {
-   "name": "5 STARS Israel HD",
+   "name": "VOOsport World 1 HD",
    "count": 1,
-   "example": "Panathinaikos AKTOR Athens – Armani Olimpia Milan (el)"
+   "example": "Besiktas Istanbul – Olympiacos Piraeus (el)"
   },
   {
    "name": "Sport 2 Czechia HD",
