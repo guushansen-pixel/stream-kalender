@@ -1,7 +1,13 @@
 {
- "generatedAt": "2026-10-29T11:20:33.441Z",
+ "generatedAt": "2026-10-29T20:05:29.240Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [],
+ "ftaUnknown": [
+  {
+   "name": "Idman TV HD",
+   "count": 1,
+   "example": "FC Bayern München – Borussia Dortmund (bl1)"
+  }
+ ],
  "otherUnknown": [
   {
    "name": "Blue Sport 1 Live HD",
