@@ -1,13 +1,7 @@
 {
- "generatedAt": "2026-10-28T20:06:58.073Z",
+ "generatedAt": "2026-10-29T11:20:33.441Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [
-  {
-   "name": "La Chaine L´Équipe HD",
-   "count": 1,
-   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
-  }
- ],
+ "ftaUnknown": [],
  "otherUnknown": [
   {
    "name": "Blue Sport 1 Live HD",
@@ -18,11 +12,6 @@
    "name": "VOOsport World 2 HD",
    "count": 3,
    "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
-  },
-  {
-   "name": "Como TV",
-   "count": 2,
-   "example": "Hannover 96 – 1. FC Kaiserslautern (dfb)"
   },
   {
    "name": "Blue Sport 9 Live HD",
@@ -110,34 +99,14 @@
    "example": "Olympiacos Piraeus – Armani Olimpia Milan (el)"
   },
   {
+   "name": "Z Sports 2 Angola",
+   "count": 1,
+   "example": "FC Bayern München – Borussia Dortmund (bl1)"
+  },
+  {
    "name": "5 SPORT Israel HD",
-   "count": 2,
+   "count": 1,
    "example": "Dubai Basketball – Hapoel IBI Tel Aviv (el)"
-  },
-  {
-   "name": "Astro Arena Bola HD",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – 1. FC Nürnberg (dfb)"
-  },
-  {
-   "name": "Astro Football HD",
-   "count": 1,
-   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
-  },
-  {
-   "name": "Astro Sports UHD",
-   "count": 1,
-   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
-  },
-  {
-   "name": "Sport 2 Hungary HD",
-   "count": 1,
-   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
-  },
-  {
-   "name": "SuperSport ESPN HD",
-   "count": 1,
-   "example": "FC Bayern München – 1. FC Magdeburg (dfb)"
   },
   {
    "name": "5 LIVE Israel HD",
@@ -148,11 +117,6 @@
    "name": "5 STARS Israel HD",
    "count": 1,
    "example": "Crvena Zvezda Meridianbet Belgrade – FC Bayern Munich (el)"
-  },
-  {
-   "name": "VOOsport World 1 HD",
-   "count": 1,
-   "example": "Besiktas Istanbul – Olympiacos Piraeus (el)"
   },
   {
    "name": "Sport 2 Czechia HD",
