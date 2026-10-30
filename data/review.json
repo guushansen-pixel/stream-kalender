@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-29T20:05:29.240Z",
+ "generatedAt": "2026-10-30T11:12:56.010Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -9,16 +9,6 @@
   }
  ],
  "otherUnknown": [
-  {
-   "name": "Blue Sport 1 Live HD",
-   "count": 3,
-   "example": "Manchester United FC – AS Rom (ucl)"
-  },
-  {
-   "name": "VOOsport World 2 HD",
-   "count": 3,
-   "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
-  },
   {
    "name": "Blue Sport 9 Live HD",
    "count": 2,
@@ -80,6 +70,11 @@
    "example": "Villarreal CF – Paris St. Germain (ucl)"
   },
   {
+   "name": "Blue Sport 1 Live HD",
+   "count": 2,
+   "example": "Manchester United FC – AS Rom (ucl)"
+  },
+  {
    "name": "Blue Sport 4 Live HDR",
    "count": 2,
    "example": "Manchester United FC – AS Rom (ucl)"
@@ -95,14 +90,14 @@
    "example": "LASK – Slovan Bratislava (ucl)"
   },
   {
+   "name": "VOOsport World 2 HD",
+   "count": 2,
+   "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
+  },
+  {
    "name": "5 MAX Israel HD",
    "count": 2,
    "example": "FC Barcelona – Valencia Basket (el)"
-  },
-  {
-   "name": "5 PLUS Israel HD",
-   "count": 2,
-   "example": "Olympiacos Piraeus – Armani Olimpia Milan (el)"
   },
   {
    "name": "Z Sports 2 Angola",
@@ -110,24 +105,24 @@
    "example": "FC Bayern München – Borussia Dortmund (bl1)"
   },
   {
-   "name": "5 SPORT Israel HD",
+   "name": "Sport 1 Czechia HD",
    "count": 1,
-   "example": "Dubai Basketball – Hapoel IBI Tel Aviv (el)"
-  },
-  {
-   "name": "5 LIVE Israel HD",
-   "count": 1,
-   "example": "Real Madrid – Fenerbahce Tarfin Istanbul (el)"
-  },
-  {
-   "name": "5 STARS Israel HD",
-   "count": 1,
-   "example": "Crvena Zvezda Meridianbet Belgrade – FC Bayern Munich (el)"
+   "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
   },
   {
    "name": "Sport 2 Czechia HD",
    "count": 1,
-   "example": "Bayer Leverkusen – Marseille (uel)"
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "5 PLUS Israel HD",
+   "count": 1,
+   "example": "Olympiacos Piraeus – Armani Olimpia Milan (el)"
+  },
+  {
+   "name": "5 SPORT Israel HD",
+   "count": 1,
+   "example": "Dubai Basketball – Hapoel IBI Tel Aviv (el)"
   }
  ],
  "unknownSlugs": [],
