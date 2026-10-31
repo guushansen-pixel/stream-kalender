@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-30T19:52:01.848Z",
+ "generatedAt": "2026-10-31T10:44:56.599Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -90,16 +90,6 @@
    "example": "LASK – Slovan Bratislava (ucl)"
   },
   {
-   "name": "VOOsport World 2 HD",
-   "count": 2,
-   "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
-  },
-  {
-   "name": "5 MAX Israel HD",
-   "count": 2,
-   "example": "FC Barcelona – Valencia Basket (el)"
-  },
-  {
    "name": "Z Sports 2 Angola",
    "count": 1,
    "example": "FC Bayern München – Borussia Dortmund (bl1)"
@@ -115,14 +105,9 @@
    "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
   },
   {
-   "name": "5 PLUS Israel HD",
+   "name": "VOOsport World 2 HD",
    "count": 1,
-   "example": "Olympiacos Piraeus – Armani Olimpia Milan (el)"
-  },
-  {
-   "name": "5 SPORT Israel HD",
-   "count": 1,
-   "example": "Dubai Basketball – Hapoel IBI Tel Aviv (el)"
+   "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
   }
  ],
  "unknownSlugs": [],
