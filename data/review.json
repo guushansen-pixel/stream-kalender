@@ -1,9 +1,14 @@
 {
- "generatedAt": "2026-10-31T10:44:56.599Z",
+ "generatedAt": "2026-10-31T19:08:24.165Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
    "name": "Idman TV HD",
+   "count": 1,
+   "example": "FC Bayern München – Borussia Dortmund (bl1)"
+  },
+  {
+   "name": "TV Miramar Mozambique",
    "count": 1,
    "example": "FC Bayern München – Borussia Dortmund (bl1)"
   }
@@ -90,19 +95,24 @@
    "example": "LASK – Slovan Bratislava (ucl)"
   },
   {
+   "name": "CNBC USA HD",
+   "count": 1,
+   "example": "FC Bayern München – Borussia Dortmund (bl1)"
+  },
+  {
    "name": "Z Sports 2 Angola",
    "count": 1,
    "example": "FC Bayern München – Borussia Dortmund (bl1)"
   },
   {
-   "name": "Sport 1 Czechia HD",
-   "count": 1,
-   "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
-  },
-  {
    "name": "Sport 2 Czechia HD",
    "count": 1,
    "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "Sport 1 Czechia HD",
+   "count": 1,
+   "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
   },
   {
    "name": "VOOsport World 2 HD",
