@@ -1,8 +1,34 @@
 {
- "generatedAt": "2026-11-02T13:12:04.995Z",
+ "generatedAt": "2026-11-02T23:00:12.337Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [],
+ "ftaUnknown": [
+  {
+   "name": "Ictimai TV HD",
+   "count": 4,
+   "example": "Atletico Madrid – FC Bayern München (ucl)"
+  }
+ ],
  "otherUnknown": [
+  {
+   "name": "Digi 4K UHD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – VfB Stuttgart (ucl)"
+  },
+  {
+   "name": "TVNet Sport Azerbaijan",
+   "count": 4,
+   "example": "Villarreal CF – Paris St. Germain (ucl)"
+  },
+  {
+   "name": "Blue Sport 2 Live HD",
+   "count": 3,
+   "example": "Feyenoord Rotterdam – Inter Mailand (ucl)"
+  },
+  {
+   "name": "Blue Sport 4 Live HDR",
+   "count": 3,
+   "example": "Manchester United FC – AS Rom (ucl)"
+  },
   {
    "name": "Blue Sport 9 Live HD",
    "count": 2,
@@ -14,9 +40,9 @@
    "example": "Galatasaray Istanbul – VfB Stuttgart (ucl)"
   },
   {
-   "name": "Blue Sport 2 Live HD",
+   "name": "Silk Universal HD",
    "count": 2,
-   "example": "Feyenoord Rotterdam – Inter Mailand (ucl)"
+   "example": "Galatasaray Istanbul – VfB Stuttgart (ucl)"
   },
   {
    "name": "Blue Sport 1 Live UHD",
@@ -54,6 +80,11 @@
    "example": "Atletico Madrid – FC Bayern München (ucl)"
   },
   {
+   "name": "LaLiga TV Bar HD",
+   "count": 2,
+   "example": "Atletico Madrid – FC Bayern München (ucl)"
+  },
+  {
    "name": "RTL Club Belgique",
    "count": 2,
    "example": "Atletico Madrid – FC Bayern München (ucl)"
@@ -69,11 +100,6 @@
    "example": "Manchester United FC – AS Rom (ucl)"
   },
   {
-   "name": "Blue Sport 4 Live HDR",
-   "count": 2,
-   "example": "Manchester United FC – AS Rom (ucl)"
-  },
-  {
    "name": "Blue Sport 4 Live HD",
    "count": 2,
    "example": "FK Bodö/Glimt – Lille OSC (ucl)"
@@ -84,6 +110,16 @@
    "example": "LASK – Slovan Bratislava (ucl)"
   },
   {
+   "name": "Blue Sport 10 Live HD",
+   "count": 1,
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
+  },
+  {
+   "name": "Blue Sport 12 Live HD",
+   "count": 1,
+   "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
+  },
+  {
    "name": "Sport 1 Czechia HD",
    "count": 1,
    "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
@@ -92,6 +128,16 @@
    "name": "Sport 2 Czechia HD",
    "count": 1,
    "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "Blue Sport 14 Live HD",
+   "count": 1,
+   "example": "Trabzonspor – SC Freiburg (uecl)"
+  },
+  {
+   "name": "Blue Sport 23 Live HD",
+   "count": 1,
+   "example": "Anadolu Efes Istanbul – Paris Basketball (el)"
   },
   {
    "name": "VOOsport World 2 HD",
