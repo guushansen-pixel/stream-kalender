@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-03T12:39:38.064Z",
+ "generatedAt": "2026-11-03T20:48:03.704Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
