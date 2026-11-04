@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T12:49:14.419Z",
+ "generatedAt": "2026-11-04T21:05:51.843Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -11,6 +11,11 @@
    "name": "CBC Sport HD",
    "count": 2,
    "example": "Fenerbahçe SK – FC Liverpool (ucl)"
+  },
+  {
+   "name": "La Nouvelle Chaîne Ivorienne",
+   "count": 1,
+   "example": "Slavia Prag – FC Arsenal (ucl)"
   }
  ],
  "otherUnknown": [
@@ -70,6 +75,11 @@
    "example": "AEK Athen – Real Madrid (ucl)"
   },
   {
+   "name": "New World Sport 1 Mauritius",
+   "count": 2,
+   "example": "AEK Athen – Real Madrid (ucl)"
+  },
+  {
    "name": "Sony Sports TEN 2 India HD",
    "count": 2,
    "example": "AEK Athen – Real Madrid (ucl)"
@@ -115,6 +125,11 @@
    "example": "Fenerbahçe SK – FC Liverpool (ucl)"
   },
   {
+   "name": "New World Sport 2 Mauritius",
+   "count": 2,
+   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
+  },
+  {
    "name": "Q Sport League HD",
    "count": 2,
    "example": "Fenerbahçe SK – FC Liverpool (ucl)"
@@ -155,6 +170,11 @@
    "example": "AEK Athen – Real Madrid (ucl)"
   },
   {
+   "name": "Silk Sport 1 HD",
+   "count": 1,
+   "example": "AEK Athen – Real Madrid (ucl)"
+  },
+  {
    "name": "Blue Sport 8 Live HD",
    "count": 1,
    "example": "Fenerbahçe SK – FC Liverpool (ucl)"
@@ -190,6 +210,11 @@
    "example": "Slavia Prag – FC Arsenal (ucl)"
   },
   {
+   "name": "New World Sport 4 Togo",
+   "count": 1,
+   "example": "Slavia Prag – FC Arsenal (ucl)"
+  },
+  {
    "name": "Q Sport Arena HD",
    "count": 1,
    "example": "Slavia Prag – FC Arsenal (ucl)"
@@ -210,7 +235,17 @@
    "example": "PSV Eindhoven – FC Brügge (ucl)"
   },
   {
+   "name": "New World Sport 5 Togo",
+   "count": 1,
+   "example": "PSV Eindhoven – FC Brügge (ucl)"
+  },
+  {
    "name": "RTL Club Belgique",
+   "count": 1,
+   "example": "PSV Eindhoven – FC Brügge (ucl)"
+  },
+  {
+   "name": "Silk Sport 3 HD",
    "count": 1,
    "example": "PSV Eindhoven – FC Brügge (ucl)"
   },
@@ -295,6 +330,11 @@
    "example": "FC Porto – SSC Napoli  (ucl)"
   },
   {
+   "name": "TOP Channel HD",
+   "count": 1,
+   "example": "FC Porto – SSC Napoli  (ucl)"
+  },
+  {
    "name": "ART Motion Sport 5 HD",
    "count": 1,
    "example": "RC Lens – Como 1907 (ucl)"
@@ -310,6 +350,11 @@
    "example": "RC Lens – Como 1907 (ucl)"
   },
   {
+   "name": "New World Sport 3 Togo",
+   "count": 1,
+   "example": "RC Lens – Como 1907 (ucl)"
+  },
+  {
    "name": "SuperSport LaLiga HD",
    "count": 1,
    "example": "RC Lens – Como 1907 (ucl)"
@@ -321,6 +366,11 @@
   },
   {
    "name": "Blue Sport 5 Live HD",
+   "count": 1,
+   "example": "Viking – Sabah (ucl)"
+  },
+  {
+   "name": "New World Sport 6 Togo",
    "count": 1,
    "example": "Viking – Sabah (ucl)"
   },
