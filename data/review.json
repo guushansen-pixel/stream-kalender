@@ -1,386 +1,71 @@
 {
- "generatedAt": "2026-11-04T21:05:51.843Z",
+ "generatedAt": "2026-11-05T12:57:26.760Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
    "name": "Ictimai TV HD",
-   "count": 3,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "CBC Sport HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "La Nouvelle Chaîne Ivorienne",
    "count": 1,
-   "example": "Slavia Prag – FC Arsenal (ucl)"
+   "example": "Trabzonspor – SC Freiburg (uecl)"
   }
  ],
  "otherUnknown": [
   {
+   "name": "ART Motion Sport 2 HD",
+   "count": 2,
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
+  },
+  {
    "name": "Sony Sports TEN 1 India HD",
-   "count": 4,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4 HD",
-   "count": 3,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4K 2 UHD",
-   "count": 3,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Cytavision Sports PPV 3 HD",
-   "count": 3,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
+   "count": 2,
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
    "name": "TVNet Sport Azerbaijan",
-   "count": 3,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "5 SPORT Israel HD",
    "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
   },
   {
-   "name": "ART Motion Sport 1 HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 3 HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4K 1 UHD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Digi 4K UHD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 1 Suomi HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "New World Sport 1 Mauritius",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 2 India HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 3 India HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 4 India HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "Sport 1 Hungary HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "SuperSport Football Plus HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 1 HD",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "We Sport Moldova",
-   "count": 2,
-   "example": "AEK Athen – Real Madrid (ucl)"
-  },
-  {
-   "name": "5 PLUS Israel HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 2 Suomi HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "New World Sport 2 Mauritius",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Q Sport League HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Silk Universal HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 2A HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "SuperSport Premier League HD",
-   "count": 2,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Blue Sport 2 Live HD",
-   "count": 2,
-   "example": "Slavia Prag – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HDR",
-   "count": 2,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "Blue Sport 9 Live HD",
+   "name": "Blue Sport 10 Live HD",
    "count": 1,
-   "example": "AEK Athen – Real Madrid (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
-   "name": "LaLiga TV Bar HD",
+   "name": "Cytavision Sports 4 HD",
    "count": 1,
-   "example": "AEK Athen – Real Madrid (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
-   "name": "Silk Sport 1 HD",
+   "name": "Cytavision Sports 4K 2 UHD",
    "count": 1,
-   "example": "AEK Athen – Real Madrid (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
-   "name": "Blue Sport 8 Live HD",
+   "name": "Cytavision Sports PPV 3 HD",
    "count": 1,
-   "example": "Fenerbahçe SK – FC Liverpool (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 2 HD",
-   "count": 1,
-   "example": "RB Leipzig – Manchester City (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HDR",
-   "count": 1,
-   "example": "RB Leipzig – Manchester City (ucl)"
-  },
-  {
-   "name": "Blue Sport 6 Live HD",
-   "count": 1,
-   "example": "RB Leipzig – Manchester City (ucl)"
-  },
-  {
-   "name": "Blue Sport D 2 HD",
-   "count": 1,
-   "example": "RB Leipzig – Manchester City (ucl)"
-  },
-  {
-   "name": "Kanal A Slovenija HD",
-   "count": 1,
-   "example": "RB Leipzig – Manchester City (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 3 Suomi HD",
-   "count": 1,
-   "example": "Slavia Prag – FC Arsenal (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
    "name": "New World Sport 4 Togo",
    "count": 1,
-   "example": "Slavia Prag – FC Arsenal (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
-   "name": "Q Sport Arena HD",
+   "name": "Q Sport League HD",
    "count": 1,
-   "example": "Slavia Prag – FC Arsenal (ucl)"
-  },
-  {
-   "name": "Sport 2 Hungary HD",
-   "count": 1,
-   "example": "Slavia Prag – FC Arsenal (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 6 HD",
-   "count": 1,
-   "example": "PSV Eindhoven – FC Brügge (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HD",
-   "count": 1,
-   "example": "PSV Eindhoven – FC Brügge (ucl)"
-  },
-  {
-   "name": "New World Sport 5 Togo",
-   "count": 1,
-   "example": "PSV Eindhoven – FC Brügge (ucl)"
-  },
-  {
-   "name": "RTL Club Belgique",
-   "count": 1,
-   "example": "PSV Eindhoven – FC Brügge (ucl)"
-  },
-  {
-   "name": "Silk Sport 3 HD",
-   "count": 1,
-   "example": "PSV Eindhoven – FC Brügge (ucl)"
-  },
-  {
-   "name": "SuperSport Football HD",
-   "count": 1,
-   "example": "PSV Eindhoven – FC Brügge (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 4 HD",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live UHD",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "Blue Sport 2 Live HDR",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "Blue Sport D 1 HD",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 7 HD",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "Q Sport Football HD",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 5 India HD",
-   "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
    "name": "SuperSport Kickoff HD",
    "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
-   "name": "SuperSport MáXimo 360",
+   "name": "SuperSport MáXimo 2A HD",
    "count": 1,
-   "example": "Borussia Dortmund – Real Betis (ucl)"
+   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
   {
-   "name": "ART Motion Sport 3 HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 6 HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "SuperSport Action HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 3A HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "SuperSport PSL HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "TOP Channel HD",
-   "count": 1,
-   "example": "FC Porto – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 5 HD",
-   "count": 1,
-   "example": "RC Lens – Como 1907 (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HD",
-   "count": 1,
-   "example": "RC Lens – Como 1907 (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 2 HD",
-   "count": 1,
-   "example": "RC Lens – Como 1907 (ucl)"
-  },
-  {
-   "name": "New World Sport 3 Togo",
-   "count": 1,
-   "example": "RC Lens – Como 1907 (ucl)"
-  },
-  {
-   "name": "SuperSport LaLiga HD",
-   "count": 1,
-   "example": "RC Lens – Como 1907 (ucl)"
-  },
-  {
-   "name": "ART Motion PRIME",
-   "count": 1,
-   "example": "Viking – Sabah (ucl)"
-  },
-  {
-   "name": "Blue Sport 5 Live HD",
-   "count": 1,
-   "example": "Viking – Sabah (ucl)"
-  },
-  {
-   "name": "New World Sport 6 Togo",
-   "count": 1,
-   "example": "Viking – Sabah (ucl)"
-  },
-  {
-   "name": "SuperSport Extra HD",
-   "count": 1,
-   "example": "Viking – Sabah (ucl)"
-  },
-  {
-   "name": "Blue Sport 10 Live HD",
+   "name": "SuperSport Premier League HD",
    "count": 1,
    "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
   },
@@ -395,9 +80,49 @@
    "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
   },
   {
+   "name": "Blue Sport 2 Live HD",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "Blue Sport 4 Live HDR",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "New World Sport 1 Mauritius",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "Silk Sport 3 HD",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
    "name": "Sport 2 Czechia HD",
    "count": 1,
    "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "SuperSport 3 Albania HD",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "SuperSport Football Plus HD",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "TUDN Español USA",
+   "count": 1,
+   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+  },
+  {
+   "name": "ART Motion Sport 3 HD",
+   "count": 1,
+   "example": "Trabzonspor – SC Freiburg (uecl)"
   },
   {
    "name": "Blue Sport 14 Live HD",
@@ -405,14 +130,19 @@
    "example": "Trabzonspor – SC Freiburg (uecl)"
   },
   {
+   "name": "SuperSport LaLiga HD",
+   "count": 1,
+   "example": "Trabzonspor – SC Freiburg (uecl)"
+  },
+  {
+   "name": "Zor TV Uzbekistan",
+   "count": 1,
+   "example": "Trabzonspor – SC Freiburg (uecl)"
+  },
+  {
    "name": "Blue Sport 23 Live HD",
    "count": 1,
    "example": "Anadolu Efes Istanbul – Paris Basketball (el)"
-  },
-  {
-   "name": "VOOsport World 2 HD",
-   "count": 1,
-   "example": "Real Madrid – Panathinaikos AKTOR Athens (el)"
   }
  ],
  "unknownSlugs": [],
