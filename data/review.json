@@ -1,148 +1,33 @@
 {
- "generatedAt": "2026-11-05T21:21:26.463Z",
+ "generatedAt": "2026-11-06T12:44:43.292Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
-   "name": "Ictimai TV HD",
-   "count": 1,
-   "example": "Trabzonspor – SC Freiburg (uecl)"
+   "name": "Idman TV HD",
+   "count": 2,
+   "example": "Hamburger SV – Borussia Mönchengladbach (bl1)"
   }
  ],
  "otherUnknown": [
   {
-   "name": "ART Motion Sport 2 HD",
+   "name": "Spíler 2 TV Hungary HD",
    "count": 2,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
+   "example": "Serbien – Deutschland (nt)"
   },
   {
-   "name": "Sony Sports TEN 1 India HD",
-   "count": 2,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "TVNet Sport Azerbaijan",
-   "count": 2,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "Blue Sport 10 Live HD",
+   "name": "LaLiga TV Bar 3",
    "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "Cytavision Sports 4 HD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "Cytavision Sports 4K 2 UHD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "Cytavision Sports PPV 3 HD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "New World Sport 4 Togo",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "Q Sport League HD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "SuperSport Kickoff HD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "SuperSport MáXimo 2A HD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "SuperSport Premier League HD",
-   "count": 1,
-   "example": "Crystal Palace FC – TSG Hoffenheim (uel)"
-  },
-  {
-   "name": "Blue Sport 12 Live HD",
-   "count": 1,
-   "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
-  },
-  {
-   "name": "Sport 1 Czechia HD",
-   "count": 1,
-   "example": "Lillestrøm SK – Viktoria Pilsen (uel)"
-  },
-  {
-   "name": "Blue Sport 2 Live HD",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "Blue Sport 4 Live HDR",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "New World Sport 1 Mauritius",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "Silk Sport 3 HD",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "Sport 2 Czechia HD",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "SuperSport 3 Albania HD",
-   "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+   "example": "1. FSV Mainz 05 – FC Bayern München (bl1)"
   },
   {
    "name": "SuperSport Football Plus HD",
    "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
+   "example": "Serbien – Deutschland (nt)"
   },
   {
-   "name": "TUDN Español USA",
+   "name": "SuperSport Premier League HD",
    "count": 1,
-   "example": "Bayer 04 Leverkusen – Olympique Marseille (uel)"
-  },
-  {
-   "name": "ART Motion Sport 3 HD",
-   "count": 1,
-   "example": "Trabzonspor – SC Freiburg (uecl)"
-  },
-  {
-   "name": "Blue Sport 14 Live HD",
-   "count": 1,
-   "example": "Trabzonspor – SC Freiburg (uecl)"
-  },
-  {
-   "name": "SuperSport LaLiga HD",
-   "count": 1,
-   "example": "Trabzonspor – SC Freiburg (uecl)"
-  },
-  {
-   "name": "Zor TV Uzbekistan",
-   "count": 1,
-   "example": "Trabzonspor – SC Freiburg (uecl)"
-  },
-  {
-   "name": "Blue Sport 23 Live HD",
-   "count": 1,
-   "example": "Anadolu Efes Istanbul – Paris Basketball (el)"
+   "example": "Deutschland – Niederlande (nt)"
   }
  ],
  "unknownSlugs": [],
