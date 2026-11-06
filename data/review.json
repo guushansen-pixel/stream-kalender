@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T12:44:43.292Z",
+ "generatedAt": "2026-11-06T20:42:56.831Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -13,6 +13,11 @@
    "name": "Spíler 2 TV Hungary HD",
    "count": 2,
    "example": "Serbien – Deutschland (nt)"
+  },
+  {
+   "name": "TVNet Sport Azerbaijan",
+   "count": 1,
+   "example": "Borussia Dortmund – SV 07 Elversberg (bl1)"
   },
   {
    "name": "LaLiga TV Bar 3",
