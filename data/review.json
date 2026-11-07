@@ -1,11 +1,16 @@
 {
- "generatedAt": "2026-11-07T11:33:23.922Z",
+ "generatedAt": "2026-11-07T19:16:09.071Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
    "name": "Idman TV HD",
    "count": 1,
    "example": "1. FSV Mainz 05 – FC Bayern München (bl1)"
+  },
+  {
+   "name": "TV Miramar Mozambique",
+   "count": 1,
+   "example": "VfB Stuttgart – SV Werder Bremen (bl1)"
   }
  ],
  "otherUnknown": [
