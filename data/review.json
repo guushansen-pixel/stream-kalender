@@ -1,7 +1,18 @@
 {
- "generatedAt": "2026-11-09T13:40:04.712Z",
+ "generatedAt": "2026-11-09T23:42:37.957Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
- "ftaUnknown": [],
+ "ftaUnknown": [
+  {
+   "name": "ViX TV",
+   "count": 2,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
+   "name": "La Chaine L´Équipe HD",
+   "count": 1,
+   "example": "FC Bayern München – Hertha BSC (dfb)"
+  }
+ ],
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
@@ -29,6 +40,11 @@
    "example": "Serbien – Deutschland (nt)"
   },
   {
+   "name": "VOOsport World 1 HD",
+   "count": 2,
+   "example": "Panathinaikos AKTOR Athens – FC Barcelona (el)"
+  },
+  {
    "name": "MTV Urheilu 1 Suomi HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
@@ -37,6 +53,11 @@
    "name": "SuperSport Football Plus HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
+  },
+  {
+   "name": "L´Équipe Live Foot",
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
   },
   {
    "name": "MTV Sub Suomi",
