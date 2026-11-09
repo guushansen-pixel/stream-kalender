@@ -1,17 +1,52 @@
 {
- "generatedAt": "2026-11-08T19:23:00.150Z",
+ "generatedAt": "2026-11-09T13:40:04.712Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [],
  "otherUnknown": [
+  {
+   "name": "Veikkaus TV",
+   "count": 30,
+   "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
+  },
+  {
+   "name": "Ruutu+ Suomi",
+   "count": 6,
+   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+  },
+  {
+   "name": "Sport 1 Czechia HD",
+   "count": 2,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
+   "name": "Sport 1 Slovakia HD",
+   "count": 2,
+   "example": "Serbien – Deutschland (nt)"
+  },
   {
    "name": "Spíler 2 TV Hungary HD",
    "count": 2,
    "example": "Serbien – Deutschland (nt)"
   },
   {
+   "name": "MTV Urheilu 1 Suomi HD",
+   "count": 1,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
    "name": "SuperSport Football Plus HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
+  },
+  {
+   "name": "MTV Sub Suomi",
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
+  },
+  {
+   "name": "MTV Urheilu 3 Suomi HD",
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
   },
   {
    "name": "SuperSport Premier League HD",
