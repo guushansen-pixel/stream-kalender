@@ -24,8 +24,15 @@ jobs:
         with:
           node-version: '22'
       - name: Pipeline
-        run: node pipeline/build.mjs
+        id: pipe
+        # Exitcodes von build.mjs: 0 = alles gut, 2 = Daten geschrieben, aber eine Quelle
+        # fiel aus (alte Daten uebernommen), 1 = harter Ausfall, nichts geschrieben.
+        run: |
+          set +e
+          node pipeline/build.mjs
+          echo "code=$?" >> "$GITHUB_OUTPUT"
       - name: Commit, falls sich etwas geaendert hat
+        if: steps.pipe.outputs.code != '1'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -34,5 +41,14 @@ jobs:
             echo "Keine Aenderungen."
           else
             git commit -m "Daten aktualisiert"
+            # Falls zwischendurch von Hand gepusht wurde: erst nachziehen.
+            git pull --rebase
             git push
           fi
+      - name: Lauf als fehlgeschlagen melden, wenn eine Quelle ausfiel
+        # Erst NACH dem Commit: die Daten sind trotzdem aktuell, aber GitHub schickt so
+        # eine Mail, statt dass ein Ausfall wochenlang unbemerkt bleibt.
+        if: steps.pipe.outputs.code != '0'
+        run: |
+          echo "::error::Pipeline endete mit Code ${{ steps.pipe.outputs.code }} - siehe Log und data/review.json (errors)."
+          exit 1

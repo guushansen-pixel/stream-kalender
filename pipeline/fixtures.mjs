@@ -1,26 +1,31 @@
 // Spielplaene aus freien APIs: OpenLigaDB (Fussball) und EuroLeague v2 (Basketball).
-import { get, normName } from './util.mjs';
+import { get, normName, seasonOf } from './util.mjs';
 
-const SEASON = 2026;
+// Nicht fest verdrahtet: sonst liefert die Pipeline ab dem Saisonwechsel still nichts mehr.
+const SEASON = seasonOf();
 
 // OpenLigaDB-Kuerzel -> unsere Wettbewerbs-ID. germanOnly: nur Spiele mit deutschem Team.
+// EL/ECL fuehrt OpenLigaDB pro Saison unter eigenem Kuerzel (uel2026), ohne Saison im Pfad.
 const OLDB = [
   { shortcut: 'bl1', comp: 'bl1' },
   { shortcut: 'bl2', comp: 'bl2' },
   { shortcut: 'bl3', comp: 'bl3' },
   { shortcut: 'dfb', comp: 'dfb' },
   { shortcut: 'ucl', comp: 'ucl' },
-  { shortcut: 'uel2026', comp: 'uel', season: '', germanOnly: true },
-  { shortcut: 'uecl2026', comp: 'uecl', season: '', germanOnly: true },
+  { shortcut: `uel${SEASON}`, comp: 'uel', season: '', germanOnly: true },
+  { shortcut: `uecl${SEASON}`, comp: 'uecl', season: '', germanOnly: true },
   { shortcut: 'DFBN', comp: 'nt' }
 ];
 
 // Deutsche Klubs in EuroLeague/EuroCup (Namensbestandteile, wie die API sie liefert).
 const GERMAN_BASKETBALL = /bayern|alba|ulm|chemnitz|rostock|frankfurt|bonn|bamberg|oldenburg|wurzburg|ludwigsburg|vechta|hamburg|braunschweig|heidelberg|bayreuth|gottingen/i;
 
+// failedComps: Wettbewerbe, deren Spielplan in diesem Lauf nicht abrufbar war. build.mjs
+// uebernimmt fuer sie die Termine aus dem vorherigen Datenstand, statt sie zu verlieren.
 export async function fetchFixtures({ fromMs, toMs, log }) {
   const out = [];
   const errors = [];
+  const failedComps = [];
 
   // Deutsche Teams kennen wir aus den drei Ligen; damit erkennen wir sie in den UEFA-Wettbewerben.
   const germanTokens = new Set();
@@ -28,12 +33,15 @@ export async function fetchFixtures({ fromMs, toMs, log }) {
   for (const l of OLDB) {
     const url = `https://api.openligadb.de/getmatchdata/${l.shortcut}${l.season === '' ? '' : '/' + SEASON}`;
     try {
-      leagueCache[l.shortcut] = await get(url, { json: true, gapMs: 500 });
+      const data = await get(url, { json: true, gapMs: 500, retries: 1 });
+      if (!Array.isArray(data)) throw new Error('unerwartete Antwort (kein Array)');
+      leagueCache[l.shortcut] = data;
       if (['bl1', 'bl2', 'bl3'].includes(l.comp)) {
-        for (const m of leagueCache[l.shortcut]) for (const t of [m.team1, m.team2]) normName(t.teamName).forEach((x) => germanTokens.add(x));
+        for (const m of data) for (const t of [m.team1, m.team2]) normName(t.teamName).forEach((x) => germanTokens.add(x));
       }
     } catch (e) {
       errors.push(`OpenLigaDB ${l.shortcut}: ${e.message}`);
+      failedComps.push(l.comp);
       leagueCache[l.shortcut] = [];
     }
   }
@@ -54,13 +62,13 @@ export async function fetchFixtures({ fromMs, toMs, log }) {
       });
     }
   }
-  log(`OpenLigaDB: ${out.length} Spiele im Zeitfenster`);
+  log(`OpenLigaDB (Saison ${SEASON}): ${out.length} Spiele im Zeitfenster`);
 
   // EuroLeague (E) und EuroCup (U). EuroLeague: alle Spiele holen, gefiltert wird in build.mjs
   // (deutsches Team ODER freies Angebot). EuroCup nur mit deutschem Team.
   for (const [code, comp] of [['E', 'el'], ['U', 'ec']]) {
     try {
-      const j = await get(`https://api-live.euroleague.net/v2/competitions/${code}/seasons/${code}${SEASON}/games`, { json: true, gapMs: 500 });
+      const j = await get(`https://api-live.euroleague.net/v2/competitions/${code}/seasons/${code}${SEASON}/games`, { json: true, gapMs: 500, retries: 1 });
       let n = 0;
       for (const g of j.data || []) {
         const ko = Date.parse(g.utcDate);
@@ -77,7 +85,8 @@ export async function fetchFixtures({ fromMs, toMs, log }) {
       log(`EuroLeague-API ${code}: ${n} Spiele`);
     } catch (e) {
       errors.push(`EuroLeague ${code}: ${e.message}`);
+      failedComps.push(comp);
     }
   }
-  return { fixtures: out, errors };
+  return { fixtures: out, errors, failedComps };
 }

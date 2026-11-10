@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-10T13:17:03.268Z",
+ "generatedAt": "2026-11-10T17:41:07.350Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -28,6 +28,11 @@
    "name": "Ruutu+ Suomi",
    "count": 6,
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+  },
+  {
+   "name": "Cytavision Sports 4 HD",
+   "count": 2,
+   "example": "Serbien – Deutschland (nt)"
   },
   {
    "name": "Sport 1 Czechia HD",
@@ -81,7 +86,5 @@
   }
  ],
  "unknownSlugs": [],
- "errors": [
-  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
- ]
+ "errors": []
 }

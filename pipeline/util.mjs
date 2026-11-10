@@ -7,14 +7,44 @@ export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // Pro Host mindestens `gapMs` zwischen zwei Requests - liveonsat und livesoccertv
 // haben keine Nutzungsbedingungen veroeffentlicht, also bewusst sparsam.
 const lastHit = new Map();
-export async function get(url, { json = false, gapMs = 3000, headers = {} } = {}) {
+// timeoutMs: ein haengender Server darf nicht den ganzen Lauf bis zum Workflow-Timeout
+// blockieren. retries: zusaetzliche Versuche bei Netzfehler/5xx (nicht bei 4xx - ein 403
+// wird durch Wiederholen nicht besser, und wir draengeln nicht).
+export async function get(url, { json = false, gapMs = 3000, headers = {}, timeoutMs = 30000, retries = 0 } = {}) {
   const host = new URL(url).host;
-  const wait = (lastHit.get(host) || 0) + gapMs - Date.now();
-  if (wait > 0) await sleep(wait);
-  lastHit.set(host, Date.now());
-  const res = await fetch(url, { headers: { 'User-Agent': UA, 'Accept-Language': 'de,en;q=0.8', ...headers } });
-  if (!res.ok) throw new Error(`${res.status} ${url}`);
-  return json ? res.json() : res.text();
+  // Ausfall-Probe: SK_FAIL=<Regex> laesst passende Adressen scheitern, ohne dass die
+  // Quelle wirklich gestoert sein muss (siehe CLAUDE.md "Ausfaelle testen").
+  if (process.env.SK_FAIL && new RegExp(process.env.SK_FAIL).test(url)) throw new Error(`simulierter Ausfall ${url}`);
+  for (let attempt = 0; ; attempt++) {
+    const wait = (lastHit.get(host) || 0) + gapMs - Date.now();
+    if (wait > 0) await sleep(wait);
+    lastHit.set(host, Date.now());
+    try {
+      const res = await fetch(url, {
+        headers: { 'User-Agent': UA, 'Accept-Language': 'de,en;q=0.8', ...headers },
+        signal: AbortSignal.timeout(timeoutMs)
+      });
+      if (!res.ok) {
+        const err = new Error(`${res.status} ${url}`);
+        err.noRetry = res.status < 500;
+        throw err;
+      }
+      return json ? await res.json() : await res.text();
+    } catch (e) {
+      if (e.noRetry || attempt >= retries) {
+        if (e.name === 'TimeoutError') throw new Error(`Timeout nach ${timeoutMs / 1000} s: ${url}`);
+        throw e;
+      }
+      await sleep(2000);
+    }
+  }
+}
+
+// Saison-Startjahr: die Saison 2026/27 heisst bei OpenLigaDB und EuroLeague "2026". Neue
+// Spielplaene stehen ab Juli bereit, davor laeuft noch die alte Saison aus.
+export function seasonOf(ms = Date.now()) {
+  const d = new Date(ms);
+  return d.getUTCMonth() >= 6 ? d.getUTCFullYear() : d.getUTCFullYear() - 1;
 }
 
 // Englische, deutsche und Originalschreibweisen auf ein gemeinsames Token abbilden,

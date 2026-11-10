@@ -14,7 +14,7 @@ stehen in `registry/blocklist.json` und werden nie angezeigt.
 ## Aufbau
 
 - `pipeline/` erzeugt `data/matches.json` (Node ≥ 20, keine Abhängigkeiten).
-  - `fixtures.mjs`: OpenLigaDB (`bl1/bl2/bl3/dfb/ucl/uel2026/uecl2026/DFBN`) und EuroLeague-API v2.
+  - `fixtures.mjs`: OpenLigaDB (`bl1/bl2/bl3/dfb/ucl/uel<Jahr>/uecl<Jahr>/DFBN`) und EuroLeague-API v2.
   - `liveonsat.mjs`: Sender pro Spiel, die Hauptquelle. Die Klasse `chan_live_free` heißt
     nur „unverschlüsselt per Sat“, **nicht** „legal frei“.
   - `livesoccertv.mjs`: liefert Land → Sender, ist aber **standardmäßig aus** (`--lstv`).
@@ -44,6 +44,32 @@ node tools\serve.mjs               # http://localhost:8110/web/ (nicht file://, 
 .\build.ps1 -Release               # APK; danach nach dist\stream-kalender-<version>.apk kopieren
 .\build.ps1 -VersionName "1.1" -VersionCode 2 -Release -Install
 ```
+
+## Ausfälle (seit v1.4, 2026-11-10)
+
+`build.mjs` legt den vorherigen `data/matches.json` daneben und dünnt ihn nie aus:
+
+- Spielplan-Quelle eines Wettbewerbs nicht abrufbar → dessen Termine werden unverändert
+  übernommen. liveonsat liefert für einen Wettbewerb nichts mehr, hatte dort zuletzt aber
+  Sender → die spielgenauen Angebote bleiben. Beides steht in `errors`, Exitcode **2**.
+- Gar keine Termine oder Einbruch unter die Hälfte → nichts wird geschrieben, Exitcode **1**.
+- Der Workflow committet bei 0 und 2 und meldet den Lauf bei 1 und 2 danach als
+  fehlgeschlagen (GitHub schickt dann eine Mail). Ein grüner Lauf heißt also: alle Quellen da.
+- Ausfälle testen: `SK_FAIL=<Regex>` lässt passende Adressen scheitern, z. B.
+  `SK_FAIL=liveonsat node pipeline/build.mjs`. **Vorher `data/` sichern**, der Lauf schreibt.
+- Zuordnung liveonsat → Termin läuft über `assignOnce()`: jeder Eintrag nur einmal, die
+  ähnlichsten Paare zuerst. Wer an `pairScore` dreht, vergleicht vorher/nachher, wie viele
+  Termine liveonsat-Sender haben (zuletzt 52 von 242, keiner verloren).
+- Die Saison kommt aus dem Datum (`seasonOf()`, Wechsel am 1. Juli), auch in den
+  OpenLigaDB-Kürzeln `uel<Jahr>` / `uecl<Jahr>`. Ob OpenLigaDB die Kürzel 2027 wieder so
+  nennt, im Juli 2027 prüfen.
+- **3. Liga:** liveonsat hat dafür keine Einzelseite (nur `-all-football`, `-bundesliga1`,
+  `-bundesliga2`, `-dfb-Pokal`). Aus GitHub Actions kommt die Sammelseite mit 403 zurück,
+  von zu Hause aus nicht. Drittliga-Sender gibt es deshalb nur nach einem lokalen Lauf oder
+  über `rules.json` / `overrides`.
+- App: der mitgelieferte Datenstand kommt als `data/matches.js` (`window.BUNDLED_DATA`, von
+  `build.ps1` erzeugt), nicht per `fetch` – das scheitert unter `file:///android_asset`.
+  Am Testserver fehlt die Datei, der 404 in der Konsole ist normal.
 
 ## Pflege (wiederkehrend)
 

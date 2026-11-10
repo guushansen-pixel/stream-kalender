@@ -33,6 +33,11 @@ Copy-Item (Join-Path $Project 'web\*') $staging -Recurse
 $data = Join-Path $Project 'data\matches.json'
 if (-not (Test-Path $data)) { throw "data\matches.json fehlt - erst 'node pipeline\build.mjs' laufen lassen." }
 Copy-Item $data (Join-Path $staging 'data\matches.json')
+# Dieselben Daten als Skript: fetch() auf file:///android_asset scheitert im WebView, ein
+# <script src> nicht. index.html liest window.BUNDLED_DATA, wenn der Online-Abruf fehlschlaegt.
+# Ohne BOM schreiben, und U+2028/2029 maskieren (in JSON erlaubt, in aelteren JS-Engines nicht).
+$json = [System.IO.File]::ReadAllText($data).Trim().Replace([string][char]0x2028, ' ').Replace([string][char]0x2029, ' ')
+[System.IO.File]::WriteAllText((Join-Path $staging 'data\matches.js'), "window.BUNDLED_DATA = $json;`n", (New-Object System.Text.UTF8Encoding($false)))
 
 & "$ApkBuilder\new-app.ps1" -Name $AppName -PackageId $PackageId `
     -WebRoot $staging `

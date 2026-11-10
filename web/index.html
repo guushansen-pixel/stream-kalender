@@ -32,6 +32,7 @@
   .row { display: flex; align-items: center; gap: 8px; }
   h1 { font-size: 19px; margin: 0; flex: 1; letter-spacing: .2px; }
   .iconbtn { background: var(--surface2); border: 0; color: var(--text); width: 36px; height: 36px; border-radius: 50%; font-size: 17px; }
+  .iconbtn:disabled { opacity: .45; }
   .where { margin-top: 8px; }
   .where label { color: var(--muted); font-size: 13px; white-space: nowrap; }
   select {
@@ -87,6 +88,7 @@
 <header>
   <div class="row">
     <h1>Stream-Kalender</h1>
+    <button class="iconbtn" id="refreshBtn" aria-label="Aktualisieren">↻</button>
     <button class="iconbtn" id="infoBtn" aria-label="Info">i</button>
   </div>
   <div class="row where">
@@ -117,6 +119,9 @@
     Rechte und Programme ändern sich kurzfristig.</p>
 </dialog>
 
+<!-- Mitgelieferter Datenstand fuer den ersten Start ohne Netz. Existiert nur in der APK
+     (build.ps1 erzeugt die Datei); am Testserver laeuft der Abruf ins Leere, das ist gewollt. -->
+<script src="data/matches.js" onerror="void 0"></script>
 <script>
 'use strict';
 const DATA_URL = 'https://raw.githubusercontent.com/guushansen-pixel/stream-kalender/main/data/matches.json';
@@ -154,23 +159,49 @@ async function fetchJson(url) {
   } finally { clearTimeout(t); }
 }
 
+let lastOnline = 0;   // wann zuletzt erfolgreich online geladen wurde
+let loading = false;
+
 async function load() {
-  const cached = store.get(DATA_KEY, null);
-  if (cached) { data = cached; render(); }
-  let fresh = null, from = '';
-  try { fresh = await fetchJson(DATA_URL); from = 'online'; } catch { /* offline oder Repo noch nicht da */ }
-  if (!fresh) {
-    for (const u of LOCAL_URLS) { try { fresh = await fetchJson(u); from = 'mitgeliefert'; break; } catch { /* naechste */ } }
+  if (loading) return;
+  loading = true;
+  $('refreshBtn').disabled = true;
+  try {
+    if (!data) {
+      const cached = store.get(DATA_KEY, null);
+      if (cached) { data = cached; render(); }
+    }
+    let fresh = null, from = '';
+    try { fresh = await fetchJson(DATA_URL); from = 'online'; lastOnline = Date.now(); } catch { /* offline oder Repo noch nicht da */ }
+    if (!fresh) {
+      // In der APK: data/matches.js (von build.ps1 erzeugt) hat die Daten als
+      // window.BUNDLED_DATA mitgebracht. fetch() auf file:///android_asset scheitert im
+      // WebView, deshalb der Weg ueber ein <script>.
+      if (window.BUNDLED_DATA) { fresh = window.BUNDLED_DATA; from = 'mitgeliefert'; }
+      // Am Testserver gibt es die .js nicht, dort liegt die JSON-Datei daneben.
+      else for (const u of LOCAL_URLS) { try { fresh = await fetchJson(u); from = 'mitgeliefert'; break; } catch { /* naechste */ } }
+    }
+    // Nur ersetzen, wenn neuer als das, was schon angezeigt wird.
+    if (fresh && (!data || fresh.generatedAt >= data.generatedAt)) {
+      data = fresh;
+      if (from === 'online') store.set(DATA_KEY, fresh);
+    } else if (fresh && from !== 'online') from = '';
+    if (!data) { $('list').innerHTML = '<p class="empty">Keine Daten verfügbar. Bitte mit dem Internet verbinden.</p>'; return; }
+    setStatus(from);
+    render();
+  } finally {
+    loading = false;
+    $('refreshBtn').disabled = false;
   }
-  // Nur ersetzen, wenn neuer als der Cache.
-  if (fresh && (!data || fresh.generatedAt >= data.generatedAt)) {
-    data = fresh;
-    if (from === 'online') store.set(DATA_KEY, fresh);
-  }
-  if (!data) { $('list').innerHTML = '<p class="empty">Keine Daten verfügbar. Bitte mit dem Internet verbinden.</p>'; return; }
-  setStatus(from);
-  render();
 }
+
+// Die App bleibt oft tagelang im Hintergrund. Beim Zurueckkehren neu laden, wenn der
+// letzte erfolgreiche Abruf ueber eine Stunde her ist; sonst nur neu zeichnen, damit
+// inzwischen beendete Spiele verschwinden.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  if (Date.now() - lastOnline > 3600e3) load(); else render();
+});
 
 function setStatus(from) {
   const age = (Date.now() - Date.parse(data.generatedAt)) / 3600e3;
@@ -331,6 +362,7 @@ $('list').addEventListener('click', (e) => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 $('infoBtn').onclick = () => $('info').showModal();
+$('refreshBtn').onclick = load;
 load();
 </script>
 </body>

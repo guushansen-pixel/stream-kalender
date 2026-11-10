@@ -99,28 +99,48 @@ function bump(map, key, example) {
   v.n++; map.set(key, v);
 }
 
-// Bestes Gegenstueck aus einer Quelle: gleicher Wettbewerb, Anstoss +-3 h, aehnlichste Paarung.
-function bestMatch(m, items, compOf) {
+// Kandidaten aus einer Quelle: gleicher Wettbewerb, Anstoss +-3 h, Paarung aehnlich genug.
+function candidates(m, items, compOf) {
   const ko = Date.parse(m.kickoffUTC);
   const want = LOS_COMP[m.comp] || m.comp;
-  let best = null, bestScore = 1.5;
+  const out = [];
   for (const it of items) {
     if (compOf(it) !== want) continue;
     if (Math.abs(Date.parse(it.kickoffUTC) - ko) > 3 * 3600e3 && !m.tbc) continue;
     if (m.tbc && Math.abs(Date.parse(it.kickoffUTC) - ko) > 30 * 3600e3) continue;
     const s = pairScore(m.home, m.away, it.home, it.away);
-    if (s > bestScore) { best = it; bestScore = s; }
+    if (s > 1.5) out.push({ it, s });
   }
-  return best;
+  return out;
+}
+function bestMatch(m, items, compOf) {
+  return candidates(m, items, compOf).sort((a, b) => b.s - a.s)[0]?.it || null;
+}
+
+// liveonsat-Eintraege den Terminen zuordnen: jede Zuordnung nur einmal, die aehnlichsten
+// Paare zuerst. Vorher nahm sich jeder Termin unabhaengig den besten Treffer; teilten zwei
+// Klubs ein Namens-Token (Real Madrid / Atletico Madrid, gleicher Abend), konnte ein Termin
+// die Senderliste des anderen bekommen.
+export function assignOnce(matches, items, compOf) {
+  const pairs = [];
+  matches.forEach((m, mi) => { for (const c of candidates(m, items, compOf)) pairs.push({ mi, m, it: c.it, s: c.s }); });
+  pairs.sort((a, b) => b.s - a.s || a.mi - b.mi);
+  const byMatch = new Map(), taken = new Set();
+  for (const p of pairs) {
+    if (byMatch.has(p.m) || taken.has(p.it)) continue;
+    byMatch.set(p.m, p.it); taken.add(p.it);
+  }
+  return byMatch;
 }
 
 const usedLos = new Set();
+let losFor = new Map();
 function enrich(m) {
   m.offers = []; m.pay = {}; m.other = {};
   const label = `${m.home} – ${m.away} (${m.comp})`;
 
   // 1) liveonsat
-  const l = bestMatch(m, los.items, (it) => it.comp);
+  const l = losFor.get(m) || null;
   if (l) {
     usedLos.add(l);
     if (m.tbc && m.manual) { m.kickoffUTC = l.kickoffUTC; m.tbc = false; }
@@ -193,6 +213,7 @@ function enrich(m) {
   }
 }
 
+losFor = assignOnce(events, los.items, (it) => it.comp);
 events.forEach(enrich);
 
 // Spiele, die nur liveonsat kennt, als eigene Events aufnehmen: Boxkaempfe und EL/ECL-Spiele
@@ -209,13 +230,70 @@ for (const it of los.items) {
   const m = euro
     ? { id: `${it.comp}-los-${ko}-${normName(it.home)[0]}`, sport: 'football', comp: it.comp, kickoffUTC: it.kickoffUTC, home: it.home, away: it.away, stage: it.head.replace(/^.*- /, ''), de: true, offers: [], pay: {}, other: {} }
     : { id: `box-los-${ko}`, sport: 'boxing', comp: 'box', kickoffUTC: it.kickoffUTC, home: it.home, away: it.away, stage: it.head.replace(/^Professional Boxing - /, ''), de: false, offers: [], pay: {}, other: {} };
+  losFor.set(m, it);
   enrich(m);
   events.push(m);
 }
 
 // EuroLeague: nur deutsche Spiele oder solche mit belegtem (nicht nur Regel-)Gratisangebot.
 const final = events.filter((m) => m.comp !== 'el' || m.de || m.offers.some((o) => !(o.src.length === 1 && o.src[0] === 'regel')));
-final.sort((a, b) => a.kickoffUTC.localeCompare(b.kickoffUTC));
+
+// ------------------------------------------------- Schutz vor Fehllaeufen --
+// Faellt eine Quelle aus, darf der Lauf den guten Datenstand nicht ausduennen: die App
+// uebernimmt jede neuere matches.json. Deshalb den vorherigen Stand danebenlegen.
+let prev = null;
+try { prev = readJson('data/matches.json'); } catch { /* erster Lauf */ }
+const prevFuture = (prev?.matches || []).filter((p) => Date.parse(p.end || p.ko) >= fromMs);
+const degraded = [];
+
+// a) Spielplan-Quelle ausgefallen -> Termine dieses Wettbewerbs unveraendert uebernehmen.
+const carried = [];
+for (const comp of new Set(fx.failedComps || [])) {
+  const have = new Set(final.filter((m) => m.comp === comp).map((m) => m.id));
+  const keep = prevFuture.filter((p) => p.comp === comp && !have.has(p.id));
+  carried.push(...keep);
+  degraded.push(`Spielplan ${comp} nicht abrufbar - ${keep.length} Termine aus dem Stand vom ${prev?.generatedAt || '?'} uebernommen`);
+}
+
+// b) liveonsat liefert fuer einen Wettbewerb nichts mehr, hatte dort aber zuletzt Sender ->
+//    die spielgenauen Angebote dieses Wettbewerbs aus dem alten Stand behalten.
+if (!args.has('--no-los')) {
+  const prevById = new Map(prevFuture.map((p) => [p.id, p]));
+  const losComps = new Set(los.items.map((it) => it.comp));
+  const lost = new Map();
+  for (const m of final) {
+    const want = LOS_COMP[m.comp] || m.comp;
+    if (losComps.has(want)) continue;
+    const p = prevById.get(m.id);
+    const old = (p?.offers || []).filter((o) => o.src.includes('liveonsat'));
+    if (!old.length) continue;
+    for (const o of old) {
+      const cur = m.offers.find((x) => x.ch === o.ch && x.c === o.c);
+      if (!cur) m.offers.push({ ...o, src: ['liveonsat'] });
+      else { if (CONF_RANK[o.conf] > CONF_RANK[cur.conf]) cur.conf = o.conf; if (!cur.src.includes('liveonsat')) cur.src.push('liveonsat'); }
+    }
+    for (const k of ['pay', 'other']) for (const [c, names] of Object.entries(p[k] || {})) for (const n of names) addList(m[k], c, n);
+    lost.set(m.comp, (lost.get(m.comp) || 0) + 1);
+  }
+  for (const [comp, n] of lost) degraded.push(`liveonsat ohne Daten fuer ${comp} - Sender von ${n} Terminen aus dem Stand vom ${prev.generatedAt} uebernommen`);
+}
+errors.push(...degraded);
+
+const toOut = (m) => ({
+  id: m.id, sport: m.sport, comp: m.comp, ko: m.kickoffUTC, end: m.endUTC, tbc: m.tbc || undefined,
+  home: m.home, away: m.away, stage: m.stage || undefined, venue: m.venue, de: m.de || undefined, note: m.note,
+  offers: m.offers, pay: m.pay, other: m.other
+});
+const matchesOut = [...final.map(toOut), ...carried].sort((a, b) => a.ko.localeCompare(b.ko));
+
+// c) Harter Ausfall: gar keine Termine, oder Einbruch auf unter die Haelfte. Dann nichts
+//    schreiben und mit Exitcode 1 enden - der Workflow schlaegt fehl, GitHub schickt eine Mail.
+const prevCount = prevFuture.length;
+if (!matchesOut.length || (prevCount >= 20 && matchesOut.length < prevCount / 2)) {
+  log(`ABBRUCH: nur ${matchesOut.length} Termine (vorher ${prevCount}). Alter Datenstand bleibt unveraendert.`);
+  if (errors.length) log(errors.join('\n'));
+  process.exit(1);
+}
 
 const out = {
   generatedAt: new Date(now).toISOString(),
@@ -224,11 +302,7 @@ const out = {
   comps: COMPS,
   countries: COUNTRY_NAMES,
   channels: Object.fromEntries(channels.map(({ re, match, ...c }) => [c.id, c])),
-  matches: final.map((m) => ({
-    id: m.id, sport: m.sport, comp: m.comp, ko: m.kickoffUTC, end: m.endUTC, tbc: m.tbc || undefined,
-    home: m.home, away: m.away, stage: m.stage || undefined, venue: m.venue, de: m.de || undefined, note: m.note,
-    offers: m.offers, pay: m.pay, other: m.other
-  })),
+  matches: matchesOut,
   errors
 };
 fs.mkdirSync(path.join(ROOT, 'data'), { recursive: true });
@@ -241,6 +315,9 @@ fs.writeFileSync(path.join(ROOT, 'data/review.json'), JSON.stringify({
   ftaUnknown: top(review.ftaUnknown, 100), otherUnknown: top(review.otherUnknown, 150), unknownSlugs: [...review.slugs], errors
 }, null, 1));
 
-const withFree = final.filter((m) => m.offers.some((o) => o.conf === 'sicher')).length;
-log(`${final.length} Termine, ${withFree} mit sicherem Gratisangebot, ${errors.length} Fehler`);
+const withFree = matchesOut.filter((m) => m.offers.some((o) => o.conf === 'sicher')).length;
+log(`${matchesOut.length} Termine, ${withFree} mit sicherem Gratisangebot, ${errors.length} Fehler`);
 if (errors.length) log(errors.join('\n'));
+// Exitcode 2 = Daten geschrieben, aber eine Quelle fiel aus und alte Daten wurden
+// uebernommen. Der Workflow committet trotzdem und meldet den Lauf danach als fehlgeschlagen.
+if (degraded.length) process.exitCode = 2;
