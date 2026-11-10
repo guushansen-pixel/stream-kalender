@@ -1,7 +1,12 @@
 {
- "generatedAt": "2026-11-09T23:42:37.957Z",
+ "generatedAt": "2026-11-10T13:17:03.268Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
+  {
+   "name": "Mediaset 20 Italia HD",
+   "count": 2,
+   "example": "Serbien – Deutschland (nt)"
+  },
   {
    "name": "ViX TV",
    "count": 2,
