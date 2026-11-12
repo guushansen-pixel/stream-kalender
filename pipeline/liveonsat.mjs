@@ -58,7 +58,10 @@ export function parseLiveonsat(html) {
 }
 
 export async function fetchLiveonsat({ log }) {
-  const all = [], errors = [];
+  // hardFailures: Seiten, die auch ueber ihre Ersatzseiten nicht (vollstaendig) zu holen
+  // waren. Scheitert nur die Sammelseite und die Einzelseiten gehen, ist das der bekannte
+  // Normalfall aus GitHub Actions und kein Ausfall.
+  const all = [], errors = [], hardFailures = [];
   const load = async (p) => {
     try { return await get(`https://liveonsat.com/${p}.php`); } catch {
       // ein zweiter Versuch nach kurzer Pause, dann aufgeben
@@ -71,11 +74,12 @@ export async function fetchLiveonsat({ log }) {
       all.push(...parseLiveonsat(await load(main)));
     } catch (e) {
       errors.push(`liveonsat ${main}: ${e.message}${fallbacks.length ? ' - nutze Einzelseiten' : ''}`);
+      if (!fallbacks.length) hardFailures.push(main);
       for (const f of fallbacks) {
-        try { all.push(...parseLiveonsat(await load(f))); } catch (e2) { errors.push(`liveonsat ${f}: ${e2.message}`); }
+        try { all.push(...parseLiveonsat(await load(f))); } catch (e2) { errors.push(`liveonsat ${f}: ${e2.message}`); hardFailures.push(f); }
       }
     }
   }
   log(`liveonsat: ${all.length} Eintraege`);
-  return { items: all, errors };
+  return { items: all, errors, hardFailures };
 }

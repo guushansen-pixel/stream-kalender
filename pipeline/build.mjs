@@ -245,6 +245,7 @@ let prev = null;
 try { prev = readJson('data/matches.json'); } catch { /* erster Lauf */ }
 const prevFuture = (prev?.matches || []).filter((p) => Date.parse(p.end || p.ko) >= fromMs);
 const degraded = [];
+const notes = [];   // Hinweise ohne Alarm, landen in review.json
 
 // a) Spielplan-Quelle ausgefallen -> Termine dieses Wettbewerbs unveraendert uebernehmen.
 const carried = [];
@@ -275,7 +276,16 @@ if (!args.has('--no-los')) {
     for (const k of ['pay', 'other']) for (const [c, names] of Object.entries(p[k] || {})) for (const n of names) addList(m[k], c, n);
     lost.set(m.comp, (lost.get(m.comp) || 0) + 1);
   }
-  for (const [comp, n] of lost) degraded.push(`liveonsat ohne Daten fuer ${comp} - Sender von ${n} Terminen aus dem Stand vom ${prev.generatedAt} uebernommen`);
+  // Uebernommen wird immer. Als Ausfall (Exitcode 2, Mail) zaehlt es aber nur, wenn liveonsat
+  // in diesem Lauf wirklich gestoert war: eine Seite samt Ersatzseiten nicht abrufbar oder gar
+  // keine Eintraege. Sonst ist es der Normalfall "Wettbewerb gibt es von hier aus nicht" -
+  // z.B. 3. Liga: die Sender stammen aus einem lokalen Lauf, GitHub Actions kommt an die
+  // Sammelseite nicht heran. Das darf nicht bei jedem Lauf Alarm schlagen.
+  const losBroken = (los.hardFailures || []).length > 0 || los.items.length === 0;
+  for (const [comp, n] of lost) {
+    const msg = `liveonsat ohne Daten fuer ${comp} - Sender von ${n} Terminen aus dem Stand vom ${prev.generatedAt} uebernommen`;
+    (losBroken ? degraded : notes).push(msg);
+  }
 }
 errors.push(...degraded);
 
@@ -312,7 +322,7 @@ const top = (map, n) => [...map].sort((a, b) => b[1].n - a[1].n).slice(0, n).map
 fs.writeFileSync(path.join(ROOT, 'data/review.json'), JSON.stringify({
   generatedAt: out.generatedAt,
   _doc: 'Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.',
-  ftaUnknown: top(review.ftaUnknown, 100), otherUnknown: top(review.otherUnknown, 150), unknownSlugs: [...review.slugs], errors
+  ftaUnknown: top(review.ftaUnknown, 100), otherUnknown: top(review.otherUnknown, 150), unknownSlugs: [...review.slugs], errors, notes
 }, null, 1));
 
 const withFree = matchesOut.filter((m) => m.offers.some((o) => o.conf === 'sicher')).length;

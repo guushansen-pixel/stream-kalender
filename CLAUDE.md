@@ -50,8 +50,13 @@ node tools\serve.mjs               # http://localhost:8110/web/ (nicht file://, 
 `build.mjs` legt den vorherigen `data/matches.json` daneben und dünnt ihn nie aus:
 
 - Spielplan-Quelle eines Wettbewerbs nicht abrufbar → dessen Termine werden unverändert
-  übernommen. liveonsat liefert für einen Wettbewerb nichts mehr, hatte dort zuletzt aber
-  Sender → die spielgenauen Angebote bleiben. Beides steht in `errors`, Exitcode **2**.
+  übernommen (steht in `errors`, Exitcode **2**). liveonsat liefert für einen Wettbewerb
+  nichts mehr, hatte dort zuletzt aber Sender → die spielgenauen Angebote bleiben immer.
+  Als Ausfall (`errors`, Exitcode **2**) zählt das aber nur, wenn liveonsat in dem Lauf
+  wirklich gestört war: eine Seite samt Ersatzseiten nicht abrufbar (`hardFailures`) oder
+  gar keine Einträge. Sonst ist es nur ein Hinweis in `review.json → notes`, Exitcode 0.
+  Grund: Drittliga-Sender aus einem lokalen Lauf kann GitHub Actions nie selbst nachliefern
+  (Sammelseite 403) – das schlug am 11./12.11.2026 bei jedem Lauf Alarm.
 - Gar keine Termine oder Einbruch unter die Hälfte → nichts wird geschrieben, Exitcode **1**.
 - Der Workflow committet bei 0 und 2 und meldet den Lauf bei 1 und 2 danach als
   fehlgeschlagen (GitHub schickt dann eine Mail). Ein grüner Lauf heißt also: alle Quellen da.
