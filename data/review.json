@@ -1,7 +1,12 @@
 {
- "generatedAt": "2026-11-11T21:46:22.890Z",
+ "generatedAt": "2026-11-12T13:34:11.896Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
+  {
+   "name": "La Chaine L´Équipe HD",
+   "count": 2,
+   "example": "FC Bayern München – Hertha BSC (dfb)"
+  },
   {
    "name": "Mediaset 20 Italia HD",
    "count": 2,
@@ -11,17 +16,12 @@
    "name": "ViX TV",
    "count": 2,
    "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "La Chaine L´Équipe HD",
-   "count": 1,
-   "example": "FC Bayern München – Hertha BSC (dfb)"
   }
  ],
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 30,
+   "count": 28,
    "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
   },
   {
@@ -45,17 +45,22 @@
    "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
   },
   {
-   "name": "5 MAX Israel HD",
-   "count": 4,
-   "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
-  },
-  {
    "name": "Blue Sport 1 Live HD",
    "count": 4,
    "example": "Zalgiris Kaunas – Panathinaikos AKTOR Athens (el)"
   },
   {
+   "name": "5 MAX Israel HD",
+   "count": 3,
+   "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
+  },
+  {
    "name": "Cytavision Sports 4 HD",
+   "count": 2,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
+   "name": "L´Équipe Live Foot",
    "count": 2,
    "example": "Serbien – Deutschland (nt)"
   },
@@ -75,11 +80,6 @@
    "example": "Serbien – Deutschland (nt)"
   },
   {
-   "name": "5 LIVE Israel HD",
-   "count": 2,
-   "example": "Olympiacos Piraeus – Real Madrid (el)"
-  },
-  {
    "name": "VOOsport World 1 HD",
    "count": 2,
    "example": "Panathinaikos AKTOR Athens – FC Barcelona (el)"
@@ -95,6 +95,11 @@
    "example": "Serbien – Deutschland (nt)"
   },
   {
+   "name": "Sony Sports TEN 3 India HD",
+   "count": 1,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
    "name": "Sony Sports TEN 4 India HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
@@ -103,11 +108,6 @@
    "name": "SuperSport Football Plus HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "L´Équipe Live Foot",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
   },
   {
    "name": "MTV Sub Suomi",
@@ -125,6 +125,11 @@
    "example": "Deutschland – Niederlande (nt)"
   },
   {
+   "name": "5 LIVE Israel HD",
+   "count": 1,
+   "example": "Olympiacos Piraeus – Real Madrid (el)"
+  },
+  {
    "name": "5 GOLD Israel",
    "count": 1,
    "example": "Fenerbahce Tarfin Istanbul – LDLC ASVEL Villeurbanne (el)"
@@ -133,6 +138,6 @@
  "unknownSlugs": [],
  "errors": [
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten",
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-11T12:29:24.785Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-11T21:46:22.890Z uebernommen"
  ]
 }
