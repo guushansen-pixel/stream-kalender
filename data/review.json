@@ -1,7 +1,12 @@
 {
- "generatedAt": "2026-11-12T13:34:11.896Z",
+ "generatedAt": "2026-11-12T21:45:48.680Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
+  {
+   "name": "Idman TV HD",
+   "count": 3,
+   "example": "Panathinaikos AKTOR Athens – FC Barcelona (el)"
+  },
   {
    "name": "La Chaine L´Équipe HD",
    "count": 2,
@@ -105,6 +110,11 @@
    "example": "Serbien – Deutschland (nt)"
   },
   {
+   "name": "SuperSport 3 Albania HD",
+   "count": 1,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
    "name": "SuperSport Football Plus HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
@@ -137,7 +147,9 @@
  ],
  "unknownSlugs": [],
  "errors": [
-  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten",
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-11T21:46:22.890Z uebernommen"
+  "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
+ ],
+ "notes": [
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-12T13:34:11.896Z uebernommen"
  ]
 }
