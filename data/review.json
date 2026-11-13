@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T12:53:30.414Z",
+ "generatedAt": "2026-11-13T21:13:59.644Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -95,6 +95,11 @@
    "example": "Serbien – Deutschland (nt)"
   },
   {
+   "name": "Silk Sport 1 HD",
+   "count": 1,
+   "example": "Serbien – Deutschland (nt)"
+  },
+  {
    "name": "Sony Sports TEN 2 India HD",
    "count": 1,
    "example": "Serbien – Deutschland (nt)"
@@ -170,6 +175,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-12T21:45:48.680Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-13T12:53:30.414Z uebernommen"
  ]
 }
