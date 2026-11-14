@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T21:13:59.644Z",
+ "generatedAt": "2026-11-14T11:57:30.892Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -9,30 +9,20 @@
   },
   {
    "name": "Mediaset 20 Italia HD",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
   },
   {
    "name": "ViX TV",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Idman TV HD",
-   "count": 2,
-   "example": "Panathinaikos AKTOR Athens – FC Barcelona (el)"
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
   }
  ],
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 23,
+   "count": 20,
    "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
-  },
-  {
-   "name": "Ruutu+ Suomi",
-   "count": 5,
-   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
   },
   {
    "name": "5 PLUS Israel HD",
@@ -40,13 +30,18 @@
    "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   },
   {
-   "name": "5 STARS Israel HD",
+   "name": "Ruutu+ Suomi",
    "count": 4,
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
   },
   {
+   "name": "5 STARS Israel HD",
+   "count": 3,
+   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+  },
+  {
    "name": "5 SPORT Israel HD",
-   "count": 4,
+   "count": 3,
    "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
   },
   {
@@ -55,84 +50,19 @@
    "example": "Zalgiris Kaunas – Panathinaikos AKTOR Athens (el)"
   },
   {
-   "name": "Cytavision Sports 4 HD",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "L´Équipe Live Foot",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Sport 1 Czechia HD",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Sport 1 Slovakia HD",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Spíler 2 TV Hungary HD",
-   "count": 2,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
    "name": "5 MAX Israel HD",
    "count": 2,
    "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
   },
   {
-   "name": "ART Motion Sport 3 HD",
+   "name": "Cytavision Sports 4 HD",
    "count": 1,
-   "example": "Serbien – Deutschland (nt)"
+   "example": "Deutschland – Niederlande (nt)"
   },
   {
-   "name": "MTV Urheilu 1 Suomi HD",
+   "name": "L´Équipe Live Foot",
    "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Silk Sport 1 HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Sony Sports TEN 2 India HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Sony Sports TEN 3 India HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "Sony Sports TEN 4 India HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "SuperSport 3 Albania HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "SuperSport Football Plus HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "SuperSport MáXimo 1 HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
-  },
-  {
-   "name": "SuperSport MáXimo 3A HD",
-   "count": 1,
-   "example": "Serbien – Deutschland (nt)"
+   "example": "Deutschland – Niederlande (nt)"
   },
   {
    "name": "MTV Sub Suomi",
@@ -141,6 +71,21 @@
   },
   {
    "name": "MTV Urheilu 3 Suomi HD",
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
+  },
+  {
+   "name": "Sport 1 Czechia HD",
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
+  },
+  {
+   "name": "Sport 1 Slovakia HD",
+   "count": 1,
+   "example": "Deutschland – Niederlande (nt)"
+  },
+  {
+   "name": "Spíler 2 TV Hungary HD",
    "count": 1,
    "example": "Deutschland – Niederlande (nt)"
   },
@@ -163,11 +108,6 @@
    "name": "5 GOLD Israel",
    "count": 1,
    "example": "Fenerbahce Tarfin Istanbul – LDLC ASVEL Villeurbanne (el)"
-  },
-  {
-   "name": "VOOsport World 1 HD",
-   "count": 1,
-   "example": "Panathinaikos AKTOR Athens – FC Barcelona (el)"
   }
  ],
  "unknownSlugs": [],
@@ -175,6 +115,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-13T12:53:30.414Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-13T21:13:59.644Z uebernommen"
  ]
 }
