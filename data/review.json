@@ -1,26 +1,11 @@
 {
- "generatedAt": "2026-11-16T23:39:49.378Z",
+ "generatedAt": "2026-11-17T14:09:52.128Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
    "name": "La Chaine L´Équipe HD",
-   "count": 2,
+   "count": 1,
    "example": "FC Bayern München – Hertha BSC (dfb)"
-  },
-  {
-   "name": "CBC Sport HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Mediaset 20 Italia HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "ViX TV",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
   }
  ],
  "otherUnknown": [
@@ -33,6 +18,11 @@
    "name": "Net4+ Sport",
    "count": 8,
    "example": "FC Bayern München – 1. FC Köln (bl1)"
+  },
+  {
+   "name": "SuperSport Football Plus HD",
+   "count": 5,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
    "name": "5 PLUS Israel HD",
@@ -50,6 +40,11 @@
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
+   "name": "SuperSport Premier League HD",
+   "count": 4,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
    "name": "Blue Sport 1 Live HD",
    "count": 4,
    "example": "Manchester City – SSC Napoli  (ucl)"
@@ -60,6 +55,11 @@
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
   },
   {
+   "name": "SuperSport Kickoff HD",
+   "count": 3,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
    "name": "5 STARS Israel HD",
    "count": 3,
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
@@ -68,6 +68,41 @@
    "name": "5 SPORT Israel HD",
    "count": 3,
    "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
+  },
+  {
+   "name": "Pickx+ Sports 2 HD",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 3 HD",
+   "count": 2,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "SuperSport Action HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "SuperSport PSL HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "SuperSport Extra HD",
+   "count": 2,
+   "example": "Slovan Bratislava – Real Betis (ucl)"
+  },
+  {
+   "name": "SuperSport Football HD",
+   "count": 2,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
+   "name": "SuperSport LaLiga HD",
+   "count": 2,
+   "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
    "name": "5 MAX Israel HD",
@@ -105,6 +140,11 @@
    "example": "Real Madrid – PSV Eindhoven (ucl)"
   },
   {
+   "name": "Pickx+ Sports 4 HD",
+   "count": 1,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
    "name": "Blue Sport 1 Live UHD",
    "count": 1,
    "example": "FC Arsenal – Borussia Dortmund (ucl)"
@@ -125,7 +165,17 @@
    "example": "Feyenoord Rotterdam – FC Porto (ucl)"
   },
   {
+   "name": "Pickx+ Sports 6 HD",
+   "count": 1,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
    "name": "Blue Sport 5 Live HD",
+   "count": 1,
+   "example": "Slovan Bratislava – Real Betis (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 8",
    "count": 1,
    "example": "Slovan Bratislava – Real Betis (ucl)"
   },
@@ -135,89 +185,24 @@
    "example": "RB Leipzig – RC Lens (ucl)"
   },
   {
+   "name": "Pickx+ Sports 7 HD",
+   "count": 1,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
    "name": "Blue Sport 2 Live HD",
    "count": 1,
    "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
-   "name": "ART Motion Sport 2 HD",
+   "name": "Pickx+ Sports 5 HD",
    "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
+   "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
-   "name": "Cytavision Sports 4 HD",
+   "name": "RTL Club Belgique",
    "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "L´Équipe Live Foot",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "MTV Sub Suomi",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "MTV Urheilu 3 Suomi HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "New World Sport 1 Mauritius",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Silk Universal HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Sony Sports TEN 3 India HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Sony Sports TEN 4 India HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Sport 1 Czechia HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Sport 1 Slovakia HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "Spíler 2 TV Hungary HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "SuperSport 2 Albania HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "SuperSport MáXimo 1 HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "SuperSport MáXimo 2A HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
-  },
-  {
-   "name": "SuperSport Premier League HD",
-   "count": 1,
-   "example": "Deutschland – Niederlande (nt)"
+   "example": "FC Brügge – FC Liverpool (ucl)"
   },
   {
    "name": "5 LIVE Israel HD",
@@ -235,6 +220,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-16T13:24:47.146Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-16T23:39:49.378Z uebernommen"
  ]
 }
