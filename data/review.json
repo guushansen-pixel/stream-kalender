@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T22:47:51.741Z",
+ "generatedAt": "2026-11-18T13:41:59.539Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -11,7 +11,7 @@
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 20,
+   "count": 11,
    "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
   },
   {
@@ -25,14 +25,19 @@
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
-   "name": "5 PLUS Israel HD",
-   "count": 5,
-   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
+   "name": "Pickx+ Sports 2 HD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
    "name": "Sport 1 Hungary HD",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 3 HD",
+   "count": 4,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
    "name": "Sport 2 Hungary HD",
@@ -50,9 +55,9 @@
    "example": "Manchester City – SSC Napoli  (ucl)"
   },
   {
-   "name": "Ruutu+ Suomi",
+   "name": "5 PLUS Israel HD",
    "count": 4,
-   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   },
   {
    "name": "SuperSport Kickoff HD",
@@ -60,24 +65,49 @@
    "example": "Feyenoord Rotterdam – FC Porto (ucl)"
   },
   {
-   "name": "5 STARS Israel HD",
+   "name": "Blue Sport 2 Live HD",
+   "count": 3,
+   "example": "Como 1907 – AEK Athen (ucl)"
+  },
+  {
+   "name": "Ruutu+ Suomi",
    "count": 3,
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
   },
   {
-   "name": "5 SPORT Israel HD",
-   "count": 3,
-   "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
-  },
-  {
-   "name": "Pickx+ Sports 2 HD",
+   "name": "Blue Sport 2 Live HDR",
    "count": 2,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
-   "name": "Pickx+ Sports 3 HD",
+   "name": "Blue Sport 8 Live HD",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Blue Sport 9 Live HD",
    "count": 2,
    "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "Blue Sport 4 Live HDR",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Blue Sport 6 Live HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Blue Sport D 2 HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 4 HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
   },
   {
    "name": "SuperSport Action HD",
@@ -90,14 +120,69 @@
    "example": "Real Madrid – PSV Eindhoven (ucl)"
   },
   {
+   "name": "RTL Club Belgique",
+   "count": 2,
+   "example": "Manchester City – SSC Napoli  (ucl)"
+  },
+  {
+   "name": "Blue Sport 1 Live UHD",
+   "count": 2,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "Blue Sport 3 Live HDR",
+   "count": 2,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "Blue Sport D 1 HD",
+   "count": 2,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "Blue Sport 4 Live HD",
+   "count": 2,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 6 HD",
+   "count": 2,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
+   "name": "Blue Sport 5 Live HD",
+   "count": 2,
+   "example": "Slovan Bratislava – Real Betis (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 8",
+   "count": 2,
+   "example": "Slovan Bratislava – Real Betis (ucl)"
+  },
+  {
    "name": "SuperSport Extra HD",
    "count": 2,
    "example": "Slovan Bratislava – Real Betis (ucl)"
   },
   {
+   "name": "Blue Sport 3 Live HD",
+   "count": 2,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 7 HD",
+   "count": 2,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
    "name": "SuperSport Football HD",
    "count": 2,
    "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
+   "name": "Pickx+ Sports 5 HD",
+   "count": 2,
+   "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
    "name": "SuperSport LaLiga HD",
@@ -110,109 +195,39 @@
    "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
   },
   {
-   "name": "Blue Sport 2 Live HDR",
-   "count": 1,
-   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+   "name": "5 STARS Israel HD",
+   "count": 2,
+   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
   },
   {
-   "name": "Blue Sport 8 Live HD",
-   "count": 1,
-   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+   "name": "5 SPORT Israel HD",
+   "count": 2,
+   "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
   },
   {
-   "name": "Blue Sport 9 Live HD",
+   "name": "Blue Sport 18 Live HD",
    "count": 1,
-   "example": "FK Bodö/Glimt – LASK (ucl)"
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
   },
   {
-   "name": "Blue Sport 4 Live HDR",
+   "name": "Blue Sport 10 Live HD",
    "count": 1,
-   "example": "Real Madrid – PSV Eindhoven (ucl)"
+   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
   },
   {
-   "name": "Blue Sport 6 Live HD",
+   "name": "Blue Sport 14 Live HD",
    "count": 1,
-   "example": "Real Madrid – PSV Eindhoven (ucl)"
+   "example": "SC Freiburg – FC Twente Enschede (uecl)"
   },
   {
-   "name": "Blue Sport D 2 HD",
+   "name": "Blue Sport 12 Live HD",
    "count": 1,
-   "example": "Real Madrid – PSV Eindhoven (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 4 HD",
-   "count": 1,
-   "example": "Real Madrid – PSV Eindhoven (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live UHD",
-   "count": 1,
-   "example": "FC Arsenal – Borussia Dortmund (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HDR",
-   "count": 1,
-   "example": "FC Arsenal – Borussia Dortmund (ucl)"
-  },
-  {
-   "name": "Blue Sport D 1 HD",
-   "count": 1,
-   "example": "FC Arsenal – Borussia Dortmund (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HD",
-   "count": 1,
-   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 6 HD",
-   "count": 1,
-   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
-  },
-  {
-   "name": "Blue Sport 5 Live HD",
-   "count": 1,
-   "example": "Slovan Bratislava – Real Betis (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 8",
-   "count": 1,
-   "example": "Slovan Bratislava – Real Betis (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HD",
-   "count": 1,
-   "example": "RB Leipzig – RC Lens (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 7 HD",
-   "count": 1,
-   "example": "RB Leipzig – RC Lens (ucl)"
-  },
-  {
-   "name": "Blue Sport 2 Live HD",
-   "count": 1,
-   "example": "Como 1907 – AEK Athen (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 5 HD",
-   "count": 1,
-   "example": "Como 1907 – AEK Athen (ucl)"
-  },
-  {
-   "name": "RTL Club Belgique",
-   "count": 1,
-   "example": "FC Brügge – FC Liverpool (ucl)"
+   "example": "Valencia Basket – Panathinaikos AKTOR Athens (el)"
   },
   {
    "name": "5 LIVE Israel HD",
    "count": 1,
    "example": "Olympiacos Piraeus – Real Madrid (el)"
-  },
-  {
-   "name": "5 GOLD Israel",
-   "count": 1,
-   "example": "Fenerbahce Tarfin Istanbul – LDLC ASVEL Villeurbanne (el)"
   }
  ],
  "unknownSlugs": [],
@@ -220,6 +235,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-17T14:09:52.128Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-17T22:47:51.741Z uebernommen"
  ]
 }
