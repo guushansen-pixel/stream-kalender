@@ -1,7 +1,12 @@
 {
- "generatedAt": "2026-11-18T22:29:32.221Z",
+ "generatedAt": "2026-11-19T14:10:13.061Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
+  {
+   "name": "Idman TV HD",
+   "count": 1,
+   "example": "FC Bayern München – 1. FC Köln (bl1)"
+  },
   {
    "name": "La Chaine L´Équipe HD",
    "count": 1,
@@ -11,7 +16,7 @@
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 11,
+   "count": 10,
    "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
   },
   {
@@ -25,6 +30,16 @@
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
+   "name": "Cytavision Sports 3 HD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Cytavision Sports 4K 1 UHD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 2 HD",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
@@ -33,6 +48,16 @@
    "name": "Sport 1 Hungary HD",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Cytavision Sports 4 HD",
+   "count": 4,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "Cytavision Sports 4K 2 UHD",
+   "count": 4,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
    "name": "Pickx+ Sports 3 HD",
@@ -51,13 +76,8 @@
   },
   {
    "name": "Blue Sport 1 Live HD",
-   "count": 4,
+   "count": 3,
    "example": "Manchester City – SSC Napoli  (ucl)"
-  },
-  {
-   "name": "5 PLUS Israel HD",
-   "count": 4,
-   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   },
   {
    "name": "SuperSport Kickoff HD",
@@ -70,9 +90,9 @@
    "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
-   "name": "Ruutu+ Suomi",
+   "name": "5 PLUS Israel HD",
    "count": 3,
-   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   },
   {
    "name": "Blue Sport 2 Live HDR",
@@ -105,6 +125,11 @@
    "example": "Real Madrid – PSV Eindhoven (ucl)"
   },
   {
+   "name": "Cytavision Sports 6 HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 4 HD",
    "count": 2,
    "example": "Real Madrid – PSV Eindhoven (ucl)"
@@ -118,6 +143,11 @@
    "name": "SuperSport PSL HD",
    "count": 2,
    "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Cytavision Sports 5 HD",
+   "count": 2,
+   "example": "Manchester City – SSC Napoli  (ucl)"
   },
   {
    "name": "RTL Club Belgique",
@@ -170,6 +200,11 @@
    "example": "RB Leipzig – RC Lens (ucl)"
   },
   {
+   "name": "Cytavision Sports 7 HD",
+   "count": 2,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 7 HD",
    "count": 2,
    "example": "RB Leipzig – RC Lens (ucl)"
@@ -200,9 +235,19 @@
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
   },
   {
+   "name": "Ruutu+ Suomi",
+   "count": 2,
+   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+  },
+  {
    "name": "5 SPORT Israel HD",
    "count": 2,
    "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
+  },
+  {
+   "name": "Cytavision Sports 2 HD",
+   "count": 1,
+   "example": "Atletico Madrid – Viking (ucl)"
   },
   {
    "name": "Blue Sport 18 Live HD",
@@ -235,6 +280,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-18T13:41:59.539Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-18T22:29:32.221Z uebernommen"
  ]
 }
