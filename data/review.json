@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-20T13:51:52.080Z",
+ "generatedAt": "2026-11-20T22:08:35.089Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -14,6 +14,11 @@
   }
  ],
  "otherUnknown": [
+  {
+   "name": "Veikkaus TV",
+   "count": 23,
+   "example": "Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv (el)"
+  },
   {
    "name": "Net4+ Sport",
    "count": 8,
@@ -70,9 +75,9 @@
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
-   "name": "Veikkaus TV",
+   "name": "Ruutu+ Suomi",
    "count": 4,
-   "example": "Partizan Mozzart Bet Belgrade – Besiktas Fuzul Istanbul (el)"
+   "example": "Real Madrid – Zalgiris Kaunas (el)"
   },
   {
    "name": "SuperSport Kickoff HD",
@@ -220,19 +225,14 @@
    "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
-   "name": "Ruutu+ Suomi",
-   "count": 2,
-   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+   "name": "TVNet Sport Azerbaijan",
+   "count": 1,
+   "example": "SV Werder Bremen – Hamburger SV (bl1)"
   },
   {
    "name": "Cytavision Sports 2 HD",
    "count": 1,
    "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "Blue Sport 18 Live HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
   },
   {
    "name": "",
@@ -243,6 +243,11 @@
    "name": "Blue Sport 10 Live HD",
    "count": 1,
    "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
+  },
+  {
+   "name": "Blue Sport 18 Live HD",
+   "count": 1,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
   },
   {
    "name": "Blue Sport 14 Live HD",
@@ -280,6 +285,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-19T22:35:28.376Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-20T13:51:52.080Z uebernommen"
  ]
 }
