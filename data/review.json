@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-19T22:35:28.376Z",
+ "generatedAt": "2026-11-20T13:51:52.080Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -14,11 +14,6 @@
   }
  ],
  "otherUnknown": [
-  {
-   "name": "Veikkaus TV",
-   "count": 10,
-   "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
-  },
   {
    "name": "Net4+ Sport",
    "count": 8,
@@ -75,9 +70,9 @@
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
-   "name": "Blue Sport 1 Live HD",
-   "count": 3,
-   "example": "Manchester City – SSC Napoli  (ucl)"
+   "name": "Veikkaus TV",
+   "count": 4,
+   "example": "Partizan Mozzart Bet Belgrade – Besiktas Fuzul Istanbul (el)"
   },
   {
    "name": "SuperSport Kickoff HD",
@@ -88,11 +83,6 @@
    "name": "Blue Sport 2 Live HD",
    "count": 3,
    "example": "Como 1907 – AEK Athen (ucl)"
-  },
-  {
-   "name": "5 PLUS Israel HD",
-   "count": 3,
-   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   },
   {
    "name": "Blue Sport 2 Live HDR",
@@ -143,6 +133,11 @@
    "name": "SuperSport PSL HD",
    "count": 2,
    "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Blue Sport 1 Live HD",
+   "count": 2,
+   "example": "Manchester City – SSC Napoli  (ucl)"
   },
   {
    "name": "Cytavision Sports 5 HD",
@@ -225,24 +220,9 @@
    "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
-   "name": "5 MAX Israel HD",
-   "count": 2,
-   "example": "Partizan Mozzart Bet Belgrade – Besiktas Istanbul (el)"
-  },
-  {
-   "name": "5 STARS Israel HD",
-   "count": 2,
-   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
-  },
-  {
    "name": "Ruutu+ Suomi",
    "count": 2,
    "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
-  },
-  {
-   "name": "5 SPORT Israel HD",
-   "count": 2,
-   "example": "Paris Basketball – Hapoel IBI Tel Aviv (el)"
   },
   {
    "name": "Cytavision Sports 2 HD",
@@ -253,6 +233,11 @@
    "name": "Blue Sport 18 Live HD",
    "count": 1,
    "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
+  },
+  {
+   "name": "",
+   "count": 1,
+   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
   },
   {
    "name": "Blue Sport 10 Live HD",
@@ -270,9 +255,24 @@
    "example": "Valencia Basket – Panathinaikos AKTOR Athens (el)"
   },
   {
+   "name": "5 MAX Israel HD",
+   "count": 1,
+   "example": "Partizan Mozzart Bet Belgrade – Besiktas Fuzul Istanbul (el)"
+  },
+  {
+   "name": "5 STARS Israel HD",
+   "count": 1,
+   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
+  },
+  {
    "name": "5 LIVE Israel HD",
    "count": 1,
    "example": "Olympiacos Piraeus – Real Madrid (el)"
+  },
+  {
+   "name": "5 PLUS Israel HD",
+   "count": 1,
+   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   }
  ],
  "unknownSlugs": [],
@@ -280,6 +280,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-19T14:10:13.061Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-19T22:35:28.376Z uebernommen"
  ]
 }
