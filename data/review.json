@@ -1,12 +1,7 @@
 {
- "generatedAt": "2026-11-20T22:08:35.089Z",
+ "generatedAt": "2026-11-21T13:15:42.207Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
-  {
-   "name": "Idman TV HD",
-   "count": 1,
-   "example": "FC Bayern München – 1. FC Köln (bl1)"
-  },
   {
    "name": "La Chaine L´Équipe HD",
    "count": 1,
@@ -16,13 +11,13 @@
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 23,
+   "count": 19,
    "example": "Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv (el)"
   },
   {
    "name": "Net4+ Sport",
-   "count": 8,
-   "example": "FC Bayern München – 1. FC Köln (bl1)"
+   "count": 6,
+   "example": "Borussia Mönchengladbach – Borussia Dortmund (bl1)"
   },
   {
    "name": "SuperSport Football Plus HD",
@@ -73,11 +68,6 @@
    "name": "SuperSport Premier League HD",
    "count": 4,
    "example": "FK Bodö/Glimt – LASK (ucl)"
-  },
-  {
-   "name": "Ruutu+ Suomi",
-   "count": 4,
-   "example": "Real Madrid – Zalgiris Kaunas (el)"
   },
   {
    "name": "SuperSport Kickoff HD",
@@ -225,6 +215,11 @@
    "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
+   "name": "Ruutu+ Suomi",
+   "count": 2,
+   "example": "Real Madrid – Zalgiris Kaunas (el)"
+  },
+  {
    "name": "TVNet Sport Azerbaijan",
    "count": 1,
    "example": "SV Werder Bremen – Hamburger SV (bl1)"
@@ -233,6 +228,11 @@
    "name": "Cytavision Sports 2 HD",
    "count": 1,
    "example": "Atletico Madrid – Viking (ucl)"
+  },
+  {
+   "name": "Blue Sport 18 Live HD",
+   "count": 1,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
   },
   {
    "name": "",
@@ -245,11 +245,6 @@
    "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
   },
   {
-   "name": "Blue Sport 18 Live HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
    "name": "Blue Sport 14 Live HD",
    "count": 1,
    "example": "SC Freiburg – FC Twente Enschede (uecl)"
@@ -258,26 +253,6 @@
    "name": "Blue Sport 12 Live HD",
    "count": 1,
    "example": "Valencia Basket – Panathinaikos AKTOR Athens (el)"
-  },
-  {
-   "name": "5 MAX Israel HD",
-   "count": 1,
-   "example": "Partizan Mozzart Bet Belgrade – Besiktas Fuzul Istanbul (el)"
-  },
-  {
-   "name": "5 STARS Israel HD",
-   "count": 1,
-   "example": "FC Barcelona – Crvena Zvezda Meridianbet Belgrade (el)"
-  },
-  {
-   "name": "5 LIVE Israel HD",
-   "count": 1,
-   "example": "Olympiacos Piraeus – Real Madrid (el)"
-  },
-  {
-   "name": "5 PLUS Israel HD",
-   "count": 1,
-   "example": "Anadolu Efes Istanbul – LDLC ASVEL Villeurbanne (el)"
   }
  ],
  "unknownSlugs": [],
@@ -285,6 +260,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-20T13:51:52.080Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-20T22:08:35.089Z uebernommen"
  ]
 }
