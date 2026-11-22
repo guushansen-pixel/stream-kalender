@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-21T20:48:03.010Z",
+ "generatedAt": "2026-11-22T13:07:00.264Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -13,11 +13,6 @@
    "name": "Veikkaus TV",
    "count": 19,
    "example": "Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv (el)"
-  },
-  {
-   "name": "Net4+ Sport",
-   "count": 6,
-   "example": "Borussia Mönchengladbach – Borussia Dortmund (bl1)"
   },
   {
    "name": "SuperSport Football Plus HD",
@@ -68,6 +63,11 @@
    "name": "SuperSport Premier League HD",
    "count": 4,
    "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "Net4+ Sport",
+   "count": 3,
+   "example": "FC Augsburg – 1. FSV Mainz 05 (bl1)"
   },
   {
    "name": "SuperSport Kickoff HD",
@@ -260,6 +260,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-21T13:15:42.207Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-21T20:48:03.010Z uebernommen"
  ]
 }
