@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T20:56:34.001Z",
+ "generatedAt": "2026-11-23T15:43:41.593Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -11,12 +11,17 @@
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 19,
-   "example": "Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv (el)"
+   "count": 18,
+   "example": "Olympiacos Piraeus – LDLC ASVEL Villeurbanne (el)"
   },
   {
    "name": "SuperSport Football Plus HD",
    "count": 5,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "ART Motion Sport 1 HD",
+   "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
@@ -38,6 +43,11 @@
    "name": "Sport 1 Hungary HD",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "ART Motion Sport 2 HD",
+   "count": 4,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
    "name": "Cytavision Sports 4 HD",
@@ -65,11 +75,6 @@
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
-   "name": "Net4+ Sport",
-   "count": 3,
-   "example": "FC Augsburg – 1. FSV Mainz 05 (bl1)"
-  },
-  {
    "name": "SuperSport Kickoff HD",
    "count": 3,
    "example": "Feyenoord Rotterdam – FC Porto (ucl)"
@@ -90,7 +95,17 @@
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
+   "name": "New World Sport 2 Mauritius",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
    "name": "Blue Sport 9 Live HD",
+   "count": 2,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "New World Sport 3 Togo",
    "count": 2,
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
@@ -115,6 +130,11 @@
    "example": "Real Madrid – PSV Eindhoven (ucl)"
   },
   {
+   "name": "Kanal A Slovenija HD",
+   "count": 2,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 4 HD",
    "count": 2,
    "example": "Real Madrid – PSV Eindhoven (ucl)"
@@ -128,6 +148,11 @@
    "name": "SuperSport PSL HD",
    "count": 2,
    "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "ART Motion Sport 3 HD",
+   "count": 2,
+   "example": "Manchester City – SSC Napoli  (ucl)"
   },
   {
    "name": "Blue Sport 1 Live HD",
@@ -160,6 +185,11 @@
    "example": "FC Arsenal – Borussia Dortmund (ucl)"
   },
   {
+   "name": "ART Motion Sport 5 HD",
+   "count": 2,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
    "name": "Blue Sport 4 Live HD",
    "count": 2,
    "example": "Feyenoord Rotterdam – FC Porto (ucl)"
@@ -185,6 +215,11 @@
    "example": "Slovan Bratislava – Real Betis (ucl)"
   },
   {
+   "name": "ART Motion Sport 6 HD",
+   "count": 2,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
    "name": "Blue Sport 3 Live HD",
    "count": 2,
    "example": "RB Leipzig – RC Lens (ucl)"
@@ -205,6 +240,11 @@
    "example": "RB Leipzig – RC Lens (ucl)"
   },
   {
+   "name": "ART Motion Sport 4 HD",
+   "count": 2,
+   "example": "Como 1907 – AEK Athen (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 5 HD",
    "count": 2,
    "example": "Como 1907 – AEK Athen (ucl)"
@@ -220,9 +260,34 @@
    "example": "Real Madrid – Zalgiris Kaunas (el)"
   },
   {
-   "name": "TVNet Sport Azerbaijan",
+   "name": "New World Sport 1 Mauritius",
    "count": 1,
-   "example": "SV Werder Bremen – Hamburger SV (bl1)"
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "New World Sport 4 Togo",
+   "count": 1,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
+   "name": "ART Motion PRIME",
+   "count": 1,
+   "example": "Slovan Bratislava – Real Betis (ucl)"
+  },
+  {
+   "name": "New World Sport 7 Togo",
+   "count": 1,
+   "example": "Slovan Bratislava – Real Betis (ucl)"
+  },
+  {
+   "name": "New World Sport 5 Togo",
+   "count": 1,
+   "example": "RB Leipzig – RC Lens (ucl)"
+  },
+  {
+   "name": "New World Sport 6 Togo",
+   "count": 1,
+   "example": "Como 1907 – AEK Athen (ucl)"
   },
   {
    "name": "Cytavision Sports 2 HD",
@@ -233,11 +298,6 @@
    "name": "Blue Sport 18 Live HD",
    "count": 1,
    "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "",
-   "count": 1,
-   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
   },
   {
    "name": "Blue Sport 10 Live HD",
@@ -260,6 +320,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 4 Terminen aus dem Stand vom 2026-11-22T13:07:00.264Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-22T20:56:34.001Z uebernommen"
  ]
 }
