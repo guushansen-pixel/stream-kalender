@@ -1,7 +1,17 @@
 {
- "generatedAt": "2026-11-23T15:43:41.593Z",
+ "generatedAt": "2026-11-24T15:35:02.667Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
+  {
+   "name": "CBC Sport HD",
+   "count": 5,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Ictimai TV HD",
+   "count": 3,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
   {
    "name": "La Chaine L´Équipe HD",
    "count": 1,
@@ -20,6 +30,11 @@
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
+   "name": "5 SPORT Israel HD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
    "name": "ART Motion Sport 1 HD",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
@@ -35,12 +50,22 @@
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
+   "name": "Digi 4K UHD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
    "name": "Pickx+ Sports 2 HD",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
    "name": "Sport 1 Hungary HD",
+   "count": 4,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "We Sport Moldova",
    "count": 4,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
@@ -95,7 +120,32 @@
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
   {
+   "name": "MTV Urheilu 1 Suomi HD",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
    "name": "New World Sport 2 Mauritius",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Silk Universal HD",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "SuperSport MáXimo 1 HD",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "TUDN Español USA",
+   "count": 2,
+   "example": "Galatasaray Istanbul – Aston Villa (ucl)"
+  },
+  {
+   "name": "Zor TV Uzbekistan",
    "count": 2,
    "example": "Galatasaray Istanbul – Aston Villa (ucl)"
   },
@@ -105,7 +155,27 @@
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
   {
+   "name": "MTV Urheilu 2 Suomi HD",
+   "count": 2,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
    "name": "New World Sport 3 Togo",
+   "count": 2,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "Q Sport League HD",
+   "count": 2,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "Sony Sports TEN 1 India HD",
+   "count": 2,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "SuperSport MáXimo 2A HD",
    "count": 2,
    "example": "FK Bodö/Glimt – LASK (ucl)"
   },
@@ -150,6 +220,11 @@
    "example": "Real Madrid – PSV Eindhoven (ucl)"
   },
   {
+   "name": "5 MAX Israel HD",
+   "count": 2,
+   "example": "Manchester City – SSC Napoli  (ucl)"
+  },
+  {
    "name": "ART Motion Sport 3 HD",
    "count": 2,
    "example": "Manchester City – SSC Napoli  (ucl)"
@@ -170,6 +245,11 @@
    "example": "Manchester City – SSC Napoli  (ucl)"
   },
   {
+   "name": "5 STARS Israel HD",
+   "count": 2,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
    "name": "Blue Sport 1 Live UHD",
    "count": 2,
    "example": "FC Arsenal – Borussia Dortmund (ucl)"
@@ -181,6 +261,11 @@
   },
   {
    "name": "Blue Sport D 1 HD",
+   "count": 2,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "TVNet Sport Azerbaijan",
    "count": 2,
    "example": "FC Arsenal – Borussia Dortmund (ucl)"
   },
@@ -260,12 +345,57 @@
    "example": "Real Madrid – Zalgiris Kaunas (el)"
   },
   {
+   "name": "Silk Sport 1 HD",
+   "count": 1,
+   "example": "FK Bodö/Glimt – LASK (ucl)"
+  },
+  {
+   "name": "MTV Urheilu 3 Suomi HD",
+   "count": 1,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Silk Sport 3 HD",
+   "count": 1,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "Sony Sports TEN 5 India HD",
+   "count": 1,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
+   "name": "SuperSport MáXimo 3A HD",
+   "count": 1,
+   "example": "Real Madrid – PSV Eindhoven (ucl)"
+  },
+  {
    "name": "New World Sport 1 Mauritius",
    "count": 1,
    "example": "FC Arsenal – Borussia Dortmund (ucl)"
   },
   {
+   "name": "Sony Sports TEN 3 India HD",
+   "count": 1,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
+   "name": "Sony Sports TEN 4 India HD",
+   "count": 1,
+   "example": "FC Arsenal – Borussia Dortmund (ucl)"
+  },
+  {
    "name": "New World Sport 4 Togo",
+   "count": 1,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
+   "name": "Q Sport Football HD",
+   "count": 1,
+   "example": "Feyenoord Rotterdam – FC Porto (ucl)"
+  },
+  {
+   "name": "SuperSport MáXimo 360",
    "count": 1,
    "example": "Feyenoord Rotterdam – FC Porto (ucl)"
   },
@@ -286,6 +416,11 @@
   },
   {
    "name": "New World Sport 6 Togo",
+   "count": 1,
+   "example": "Como 1907 – AEK Athen (ucl)"
+  },
+  {
+   "name": "Q Sport Arena HD",
    "count": 1,
    "example": "Como 1907 – AEK Athen (ucl)"
   },
@@ -320,6 +455,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-22T20:56:34.001Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-23T15:43:41.593Z uebernommen"
  ]
 }
