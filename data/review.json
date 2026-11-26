@@ -1,32 +1,22 @@
 {
- "generatedAt": "2026-11-25T15:20:39.242Z",
+ "generatedAt": "2026-11-26T14:47:14.223Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
-  {
-   "name": "CBC Sport HD",
-   "count": 3,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Ictimai TV HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
   {
    "name": "La Chaine L´Équipe HD",
    "count": 1,
    "example": "FC Bayern München – Hertha BSC (dfb)"
   },
   {
-   "name": "La Nouvelle Chaîne Ivorienne",
+   "name": "CBC Sport HD",
    "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
+   "example": "SC Freiburg – FC Twente Enschede (uecl)"
   }
  ],
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 12,
+   "count": 8,
    "example": "Olympiacos Piraeus – LDLC ASVEL Villeurbanne (el)"
   },
   {
@@ -40,409 +30,34 @@
    "example": "Holstein Kiel – 1. FC Köln (dfb)"
   },
   {
-   "name": "SuperSport Football Plus HD",
-   "count": 3,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "5 SPORT Israel HD",
+   "name": "Cytavision Sports 8 HD",
    "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 1 HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 3 HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4K 1 UHD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Digi 4K UHD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 1 Suomi HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "New World Sport 2 Mauritius",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 2 HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 2 India HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 3 India HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 4 India HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Sport 1 Hungary HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 1 HD",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "TUDN Español USA",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "We Sport Moldova",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Zor TV Uzbekistan",
-   "count": 2,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 2 HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4 HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 4K 2 UHD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 2 Suomi HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "New World Sport 3 Togo",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 3 HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Silk Universal HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Sony Sports TEN 1 India HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Sport 2 Hungary HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 2A HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "SuperSport Premier League HD",
-   "count": 2,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Blue Sport 2 Live HD",
-   "count": 2,
-   "example": "FC Brügge – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Blue Sport 8 Live HD",
-   "count": 1,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Silk Sport 1 HD",
-   "count": 1,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "SuperSport Grandstand HD",
-   "count": 1,
-   "example": "Sabah – FC Barcelona (ucl)"
-  },
-  {
-   "name": "Blue Sport 9 Live HD",
-   "count": 1,
-   "example": "Slavia Prag – Villarreal CF (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live HD",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "Blue Sport 1 Live UHD",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "Blue Sport 2 Live HDR",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 7 HD",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 6 HD",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "SuperSport Football HD",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "TOP Channel HD",
-   "count": 1,
-   "example": "Inter Mailand – VfB Stuttgart (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 6 HD",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HD",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 2 HD",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "New World Sport 5 Togo",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 8",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "SuperSport LaLiga HD",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "SuperSport MáXimo 360",
-   "count": 1,
-   "example": "Atletico Madrid – Viking (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HDR",
-   "count": 1,
-   "example": "Paris St. Germain – AS Rom (ucl)"
-  },
-  {
-   "name": "Blue Sport D 1 HD",
-   "count": 1,
-   "example": "Paris St. Germain – AS Rom (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 5 HD",
-   "count": 1,
-   "example": "Paris St. Germain – AS Rom (ucl)"
-  },
-  {
-   "name": "Kanal A Slovenija HD",
-   "count": 1,
-   "example": "Paris St. Germain – AS Rom (ucl)"
-  },
-  {
-   "name": "SuperSport Action HD",
-   "count": 1,
-   "example": "Paris St. Germain – AS Rom (ucl)"
-  },
-  {
-   "name": "SuperSport PSL HD",
-   "count": 1,
-   "example": "Paris St. Germain – AS Rom (ucl)"
-  },
-  {
-   "name": "5 MAX Israel HD",
-   "count": 1,
-   "example": "FC Brügge – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Q Sport Football HD",
-   "count": 1,
-   "example": "FC Brügge – FC Liverpool (ucl)"
-  },
-  {
-   "name": "RTL Club Belgique",
-   "count": 1,
-   "example": "FC Brügge – FC Liverpool (ucl)"
-  },
-  {
-   "name": "Silk Sport 3 HD",
-   "count": 1,
-   "example": "FC Brügge – FC Liverpool (ucl)"
-  },
-  {
-   "name": "TVNet Sport Azerbaijan",
-   "count": 1,
-   "example": "FC Brügge – FC Liverpool (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 3 HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "Blue Sport 4 Live HDR",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "Blue Sport 6 Live HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "Blue Sport D 2 HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "Cytavision Sports 6 HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "MTV MAX Suomi HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 4 HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
+   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
   },
   {
    "name": "Q Sport Arena HD",
-   "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
+   "count": 2,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
   },
   {
-   "name": "Sony Sports TEN 5 India HD",
+   "name": "Blue Sport 2 Live HD",
    "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
+   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
   },
   {
-   "name": "SuperSport Kickoff HD",
+   "name": "New World Sport 4 Togo",
    "count": 1,
-   "example": "Lille OSC – FC Bayern München (ucl)"
-  },
-  {
-   "name": "5 STARS Israel HD",
-   "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 4 HD",
-   "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Blue Sport 3 Live HD",
-   "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
-  },
-  {
-   "name": "MTV Urheilu 3 Suomi HD",
-   "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
-  },
-  {
-   "name": "New World Sport 1 Mauritius",
-   "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 5 HD",
-   "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
+   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
   },
   {
    "name": "Q Sport League HD",
    "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
+   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
   },
   {
-   "name": "SuperSport MáXimo 3A HD",
+   "name": "SuperSport 3 Albania HD",
    "count": 1,
-   "example": "Sporting CP – Manchester United FC (ucl)"
-  },
-  {
-   "name": "ART Motion Sport 5 HD",
-   "count": 1,
-   "example": "Shakhtar Donetsk – Fenerbahçe SK (ucl)"
-  },
-  {
-   "name": "Blue Sport 5 Live HD",
-   "count": 1,
-   "example": "Shakhtar Donetsk – Fenerbahçe SK (ucl)"
-  },
-  {
-   "name": "New World Sport 6 Togo",
-   "count": 1,
-   "example": "Shakhtar Donetsk – Fenerbahçe SK (ucl)"
-  },
-  {
-   "name": "Pickx+ Sports 7 HD",
-   "count": 1,
-   "example": "Shakhtar Donetsk – Fenerbahçe SK (ucl)"
-  },
-  {
-   "name": "SuperSport Extra HD",
-   "count": 1,
-   "example": "Shakhtar Donetsk – Fenerbahçe SK (ucl)"
+   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
   },
   {
    "name": "Blue Sport 18 Live HD",
@@ -450,7 +65,37 @@
    "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
   },
   {
+   "name": "Cytavision Sports 6 HD",
+   "count": 1,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
+  },
+  {
+   "name": "New World Sport 6 Togo",
+   "count": 1,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
+  },
+  {
+   "name": "SuperSport Football Plus HD",
+   "count": 1,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
+  },
+  {
+   "name": "SuperSport MáXimo 360",
+   "count": 1,
+   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
+  },
+  {
+   "name": "ART Motion Sport 2 HD",
+   "count": 1,
+   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
+  },
+  {
    "name": "Blue Sport 10 Live HD",
+   "count": 1,
+   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
+  },
+  {
+   "name": "New World Sport 5 Togo",
    "count": 1,
    "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
   },
@@ -458,11 +103,6 @@
    "name": "Blue Sport 14 Live HD",
    "count": 1,
    "example": "SC Freiburg – FC Twente Enschede (uecl)"
-  },
-  {
-   "name": "Ruutu+ Suomi",
-   "count": 1,
-   "example": "Real Madrid – Zalgiris Kaunas (el)"
   }
  ],
  "unknownSlugs": [],
@@ -470,6 +110,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-24T15:35:02.667Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-25T15:20:39.242Z uebernommen"
  ]
 }
