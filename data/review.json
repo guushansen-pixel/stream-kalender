@@ -1,7 +1,12 @@
 {
- "generatedAt": "2026-11-27T14:45:22.314Z",
+ "generatedAt": "2026-11-27T23:15:16.515Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
+  {
+   "name": "Idman TV HD",
+   "count": 1,
+   "example": "Borussia Dortmund – Bayer 04 Leverkusen (bl1)"
+  },
   {
    "name": "La Chaine L´Équipe HD",
    "count": 1,
@@ -28,6 +33,26 @@
    "name": "ZBC Channel 2",
    "count": 2,
    "example": "VfB Stuttgart – Eintracht Frankfurt (bl1)"
+  },
+  {
+   "name": "5 SPORT Israel HD",
+   "count": 2,
+   "example": "Besiktas Fuzul Istanbul – Panathinaikos AKTOR Athens (el)"
+  },
+  {
+   "name": "5 STARS Israel HD",
+   "count": 2,
+   "example": "Virtus Bologna – Partizan Mozzart Bet Belgrade (el)"
+  },
+  {
+   "name": "5 PLUS Israel HD",
+   "count": 1,
+   "example": "Kosner Baskonia Vitoria-Gasteiz – Maccabi Rapyd Tel Aviv (el)"
+  },
+  {
+   "name": "5 MAX Israel HD",
+   "count": 1,
+   "example": "Real Madrid – FC Barcelona (el)"
   }
  ],
  "unknownSlugs": [],
@@ -35,6 +60,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-26T23:31:54.572Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-27T14:45:22.314Z uebernommen"
  ]
 }
