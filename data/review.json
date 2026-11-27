@@ -1,22 +1,17 @@
 {
- "generatedAt": "2026-11-26T23:31:54.572Z",
+ "generatedAt": "2026-11-27T14:45:22.314Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
    "name": "La Chaine L´Équipe HD",
    "count": 1,
    "example": "FC Bayern München – Hertha BSC (dfb)"
-  },
-  {
-   "name": "CBC Sport HD",
-   "count": 1,
-   "example": "SC Freiburg – FC Twente Enschede (uecl)"
   }
  ],
  "otherUnknown": [
   {
    "name": "Veikkaus TV",
-   "count": 8,
+   "count": 10,
    "example": "Olympiacos Piraeus – LDLC ASVEL Villeurbanne (el)"
   },
   {
@@ -30,79 +25,9 @@
    "example": "Holstein Kiel – 1. FC Köln (dfb)"
   },
   {
-   "name": "Cytavision Sports 8 HD",
+   "name": "ZBC Channel 2",
    "count": 2,
-   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Q Sport Arena HD",
-   "count": 2,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "Blue Sport 2 Live HD",
-   "count": 1,
-   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "New World Sport 4 Togo",
-   "count": 1,
-   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Q Sport League HD",
-   "count": 1,
-   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "SuperSport 3 Albania HD",
-   "count": 1,
-   "example": "Dinamo Zagreb – Bayer 04 Leverkusen (uel)"
-  },
-  {
-   "name": "Blue Sport 18 Live HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "Cytavision Sports 6 HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "New World Sport 6 Togo",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "SuperSport Football Plus HD",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "SuperSport MáXimo 360",
-   "count": 1,
-   "example": "Viktoria Pilsen – Benfica Lissabon (uel)"
-  },
-  {
-   "name": "ART Motion Sport 2 HD",
-   "count": 1,
-   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
-  },
-  {
-   "name": "Blue Sport 10 Live HD",
-   "count": 1,
-   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
-  },
-  {
-   "name": "New World Sport 5 Togo",
-   "count": 1,
-   "example": "TSG Hoffenheim – SK Puntigamer Sturm Graz (uel)"
-  },
-  {
-   "name": "Blue Sport 14 Live HD",
-   "count": 1,
-   "example": "SC Freiburg – FC Twente Enschede (uecl)"
+   "example": "VfB Stuttgart – Eintracht Frankfurt (bl1)"
   }
  ],
  "unknownSlugs": [],
@@ -110,6 +35,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-26T14:47:14.223Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-26T23:31:54.572Z uebernommen"
  ]
 }
