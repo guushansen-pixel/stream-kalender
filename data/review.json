@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-27T23:15:16.515Z",
+ "generatedAt": "2026-11-28T13:57:05.430Z",
  "_doc": "Pflege-Queue: Sender, die weder in channels.json noch in pay.json/blocklist.json stehen. ftaUnknown = laut liveonsat unverschluesselt - zuerst pruefen.",
  "ftaUnknown": [
   {
@@ -60,6 +60,6 @@
   "liveonsat europe-germany-all-football: 403 https://liveonsat.com/europe-germany-all-football.php - nutze Einzelseiten"
  ],
  "notes": [
-  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-27T14:45:22.314Z uebernommen"
+  "liveonsat ohne Daten fuer bl3 - Sender von 2 Terminen aus dem Stand vom 2026-11-27T23:15:16.515Z uebernommen"
  ]
 }
